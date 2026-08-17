@@ -1,0 +1,1614 @@
+▲ Next.js 16.3.1 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.1.16:3000
+✓ Ready in 462ms
+✓ Running next.config.ts took 33ms
+
+ GET / 200 in 324ms (next.js: 156ms, application-code: 167ms)
+ GET / 200 in 35ms (next.js: 5ms, application-code: 30ms)
+ GET / 200 in 37ms (next.js: 4ms, application-code: 32ms)
+ GET / 200 in 35ms (next.js: 14ms, application-code: 21ms)
+⨯ ./app/layout.tsx:3:1
+Error: Module not found: Can't resolve './globals.css'
+  [90m1 |[0m [36mimport[0m [36mtype[0m { [33mMetadata[0m } [36mfrom[0m [32m"next"[0m;
+  [90m2 |[0m [36mimport[0m { [33mArchivo[0m, [33mIBM_Plex_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m
+  [90m5 |[0m [36mconst[0m archivo = [33mArchivo[0m({
+  [90m6 |[0m   subsets: [[32m"latin"[0m],
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:3:1
+Error: Module not found: Can't resolve './globals.css'
+  [90m1 |[0m [36mimport[0m [36mtype[0m { [33mMetadata[0m } [36mfrom[0m [32m"next"[0m;
+  [90m2 |[0m [36mimport[0m { [33mArchivo[0m, [33mIBM_Plex_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m
+  [90m5 |[0m [36mconst[0m archivo = [33mArchivo[0m({
+  [90m6 |[0m   subsets: [[32m"latin"[0m],
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:3:1
+Error: Module not found: Can't resolve './globals.css'
+  [90m1 |[0m [36mimport[0m [36mtype[0m { [33mMetadata[0m } [36mfrom[0m [32m"next"[0m;
+  [90m2 |[0m [36mimport[0m { [33mArchivo[0m, [33mIBM_Plex_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m
+  [90m5 |[0m [36mconst[0m archivo = [33mArchivo[0m({
+  [90m6 |[0m   subsets: [[32m"latin"[0m],
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:3:1
+Error: Module not found: Can't resolve './globals.css'
+  [90m1 |[0m [36mimport[0m [36mtype[0m { [33mMetadata[0m } [36mfrom[0m [32m"next"[0m;
+  [90m2 |[0m [36mimport[0m { [33mArchivo[0m, [33mIBM_Plex_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m
+  [90m5 |[0m [36mconst[0m archivo = [33mArchivo[0m({
+  [90m6 |[0m   subsets: [[32m"latin"[0m],
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+✓ Compiled in 187ms
+[browser] ./app/layout.tsx:3:1
+Error: Module not found: Can't resolve './globals.css'
+  1 | import type { Metadata } from "next";
+  2 | import { Archivo, IBM_Plex_Mono } from "next/font/google";
+> 3 | import "./globals.css";
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const archivo = Archivo({
+  6 |   subsets: ["latin"],
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] ./app/layout.tsx:3:1
+Error: Module not found: Can't resolve './globals.css'
+  1 | import type { Metadata } from "next";
+  2 | import { Archivo, IBM_Plex_Mono } from "next/font/google";
+> 3 | import "./globals.css";
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const archivo = Archivo({
+  6 |   subsets: ["latin"],
+
+https://nextjs.org/docs/messages/module-not-found 
+ GET / 200 in 24ms (next.js: 7ms, application-code: 17ms)
+⨯ ./app/page.tsx:3:1
+Error: Module not found: Can't resolve '@/components/Hero'
+  [90m1 |[0m [36mimport[0m { [33mNavbar[0m } [36mfrom[0m [32m"@/components/Navbar"[0m;
+  [90m2 |[0m [36mimport[0m { [33mCustomCursor[0m } [36mfrom[0m [32m"@/components/CustomCursor"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { [33mHero[0m } [36mfrom[0m [32m"@/components/Hero"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { [33mAbout[0m } [36mfrom[0m [32m"@/components/About"[0m;
+  [90m5 |[0m [36mimport[0m { [33mFolderProjects[0m } [36mfrom[0m [32m"@/components/FolderProjects"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThreeDWorks[0m } [36mfrom[0m [32m"@/components/ThreeDWorks"[0m;
+
+Import map: aliased to relative './components/Hero' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:3:1
+Error: Module not found: Can't resolve '@/components/Hero'
+  [90m1 |[0m [36mimport[0m { [33mNavbar[0m } [36mfrom[0m [32m"@/components/Navbar"[0m;
+  [90m2 |[0m [36mimport[0m { [33mCustomCursor[0m } [36mfrom[0m [32m"@/components/CustomCursor"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { [33mHero[0m } [36mfrom[0m [32m"@/components/Hero"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { [33mAbout[0m } [36mfrom[0m [32m"@/components/About"[0m;
+  [90m5 |[0m [36mimport[0m { [33mFolderProjects[0m } [36mfrom[0m [32m"@/components/FolderProjects"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThreeDWorks[0m } [36mfrom[0m [32m"@/components/ThreeDWorks"[0m;
+
+Import map: aliased to relative './components/Hero' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:3:1
+Error: Module not found: Can't resolve '@/components/Hero'
+  [90m1 |[0m [36mimport[0m { [33mNavbar[0m } [36mfrom[0m [32m"@/components/Navbar"[0m;
+  [90m2 |[0m [36mimport[0m { [33mCustomCursor[0m } [36mfrom[0m [32m"@/components/CustomCursor"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { [33mHero[0m } [36mfrom[0m [32m"@/components/Hero"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { [33mAbout[0m } [36mfrom[0m [32m"@/components/About"[0m;
+  [90m5 |[0m [36mimport[0m { [33mFolderProjects[0m } [36mfrom[0m [32m"@/components/FolderProjects"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThreeDWorks[0m } [36mfrom[0m [32m"@/components/ThreeDWorks"[0m;
+
+Import map: aliased to relative './components/Hero' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:3:1
+Error: Module not found: Can't resolve '@/components/Hero'
+  [90m1 |[0m [36mimport[0m { [33mNavbar[0m } [36mfrom[0m [32m"@/components/Navbar"[0m;
+  [90m2 |[0m [36mimport[0m { [33mCustomCursor[0m } [36mfrom[0m [32m"@/components/CustomCursor"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { [33mHero[0m } [36mfrom[0m [32m"@/components/Hero"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { [33mAbout[0m } [36mfrom[0m [32m"@/components/About"[0m;
+  [90m5 |[0m [36mimport[0m { [33mFolderProjects[0m } [36mfrom[0m [32m"@/components/FolderProjects"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThreeDWorks[0m } [36mfrom[0m [32m"@/components/ThreeDWorks"[0m;
+
+Import map: aliased to relative './components/Hero' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:3:1
+Error: Module not found: Can't resolve '@/components/Hero'
+  [90m1 |[0m [36mimport[0m { [33mNavbar[0m } [36mfrom[0m [32m"@/components/Navbar"[0m;
+  [90m2 |[0m [36mimport[0m { [33mCustomCursor[0m } [36mfrom[0m [32m"@/components/CustomCursor"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { [33mHero[0m } [36mfrom[0m [32m"@/components/Hero"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { [33mAbout[0m } [36mfrom[0m [32m"@/components/About"[0m;
+  [90m5 |[0m [36mimport[0m { [33mFolderProjects[0m } [36mfrom[0m [32m"@/components/FolderProjects"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThreeDWorks[0m } [36mfrom[0m [32m"@/components/ThreeDWorks"[0m;
+
+Import map: aliased to relative './components/Hero' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:3:1
+Error: Module not found: Can't resolve '@/components/Hero'
+  [90m1 |[0m [36mimport[0m { [33mNavbar[0m } [36mfrom[0m [32m"@/components/Navbar"[0m;
+  [90m2 |[0m [36mimport[0m { [33mCustomCursor[0m } [36mfrom[0m [32m"@/components/CustomCursor"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { [33mHero[0m } [36mfrom[0m [32m"@/components/Hero"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { [33mAbout[0m } [36mfrom[0m [32m"@/components/About"[0m;
+  [90m5 |[0m [36mimport[0m { [33mFolderProjects[0m } [36mfrom[0m [32m"@/components/FolderProjects"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThreeDWorks[0m } [36mfrom[0m [32m"@/components/ThreeDWorks"[0m;
+
+Import map: aliased to relative './components/Hero' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:3:1
+Error: Module not found: Can't resolve '@/components/Hero'
+  [90m1 |[0m [36mimport[0m { [33mNavbar[0m } [36mfrom[0m [32m"@/components/Navbar"[0m;
+  [90m2 |[0m [36mimport[0m { [33mCustomCursor[0m } [36mfrom[0m [32m"@/components/CustomCursor"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { [33mHero[0m } [36mfrom[0m [32m"@/components/Hero"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { [33mAbout[0m } [36mfrom[0m [32m"@/components/About"[0m;
+  [90m5 |[0m [36mimport[0m { [33mFolderProjects[0m } [36mfrom[0m [32m"@/components/FolderProjects"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThreeDWorks[0m } [36mfrom[0m [32m"@/components/ThreeDWorks"[0m;
+
+Import map: aliased to relative './components/Hero' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:3:1
+Error: Module not found: Can't resolve '@/components/Hero'
+  [90m1 |[0m [36mimport[0m { [33mNavbar[0m } [36mfrom[0m [32m"@/components/Navbar"[0m;
+  [90m2 |[0m [36mimport[0m { [33mCustomCursor[0m } [36mfrom[0m [32m"@/components/CustomCursor"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { [33mHero[0m } [36mfrom[0m [32m"@/components/Hero"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { [33mAbout[0m } [36mfrom[0m [32m"@/components/About"[0m;
+  [90m5 |[0m [36mimport[0m { [33mFolderProjects[0m } [36mfrom[0m [32m"@/components/FolderProjects"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThreeDWorks[0m } [36mfrom[0m [32m"@/components/ThreeDWorks"[0m;
+
+Import map: aliased to relative './components/Hero' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+✓ Compiled in 82ms
+[browser] ./app/page.tsx:3:1
+Error: Module not found: Can't resolve '@/components/Hero'
+  1 | import { Navbar } from "@/components/Navbar";
+  2 | import { CustomCursor } from "@/components/CustomCursor";
+> 3 | import { Hero } from "@/components/Hero";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { About } from "@/components/About";
+  5 | import { FolderProjects } from "@/components/FolderProjects";
+  6 | import { ThreeDWorks } from "@/components/ThreeDWorks";
+
+Import map: aliased to relative './components/Hero' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found 
+ GET / 200 in 25ms (next.js: 9ms, application-code: 16ms)
+⨯ ./app/page.tsx:1:1
+Error: Module not found: Can't resolve '@/components/Navbar'
+[31m[1m>[0m [90m1 |[0m [36mimport[0m { [33mNavbar[0m } [36mfrom[0m [32m"@/components/Navbar"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m2 |[0m [36mimport[0m { [33mCustomCursor[0m } [36mfrom[0m [32m"@/components/CustomCursor"[0m;
+  [90m3 |[0m [36mimport[0m { [33mHero[0m } [36mfrom[0m [32m"@/components/Hero"[0m;
+  [90m4 |[0m [36mimport[0m { [33mAbout[0m } [36mfrom[0m [32m"@/components/About"[0m;
+
+Import map: aliased to relative './components/Navbar' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:1:1
+Error: Module not found: Can't resolve '@/components/Navbar'
+[31m[1m>[0m [90m1 |[0m [36mimport[0m { [33mNavbar[0m } [36mfrom[0m [32m"@/components/Navbar"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m2 |[0m [36mimport[0m { [33mCustomCursor[0m } [36mfrom[0m [32m"@/components/CustomCursor"[0m;
+  [90m3 |[0m [36mimport[0m { [33mHero[0m } [36mfrom[0m [32m"@/components/Hero"[0m;
+  [90m4 |[0m [36mimport[0m { [33mAbout[0m } [36mfrom[0m [32m"@/components/About"[0m;
+
+Import map: aliased to relative './components/Navbar' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:1:1
+Error: Module not found: Can't resolve '@/components/Navbar'
+[31m[1m>[0m [90m1 |[0m [36mimport[0m { [33mNavbar[0m } [36mfrom[0m [32m"@/components/Navbar"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m2 |[0m [36mimport[0m { [33mCustomCursor[0m } [36mfrom[0m [32m"@/components/CustomCursor"[0m;
+  [90m3 |[0m [36mimport[0m { [33mHero[0m } [36mfrom[0m [32m"@/components/Hero"[0m;
+  [90m4 |[0m [36mimport[0m { [33mAbout[0m } [36mfrom[0m [32m"@/components/About"[0m;
+
+Import map: aliased to relative './components/Navbar' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:1:1
+Error: Module not found: Can't resolve '@/components/Navbar'
+[31m[1m>[0m [90m1 |[0m [36mimport[0m { [33mNavbar[0m } [36mfrom[0m [32m"@/components/Navbar"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m2 |[0m [36mimport[0m { [33mCustomCursor[0m } [36mfrom[0m [32m"@/components/CustomCursor"[0m;
+  [90m3 |[0m [36mimport[0m { [33mHero[0m } [36mfrom[0m [32m"@/components/Hero"[0m;
+  [90m4 |[0m [36mimport[0m { [33mAbout[0m } [36mfrom[0m [32m"@/components/About"[0m;
+
+Import map: aliased to relative './components/Navbar' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:1:1
+Error: Module not found: Can't resolve '@/components/Navbar'
+[31m[1m>[0m [90m1 |[0m [36mimport[0m { [33mNavbar[0m } [36mfrom[0m [32m"@/components/Navbar"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m2 |[0m [36mimport[0m { [33mCustomCursor[0m } [36mfrom[0m [32m"@/components/CustomCursor"[0m;
+  [90m3 |[0m [36mimport[0m { [33mHero[0m } [36mfrom[0m [32m"@/components/Hero"[0m;
+  [90m4 |[0m [36mimport[0m { [33mAbout[0m } [36mfrom[0m [32m"@/components/About"[0m;
+
+Import map: aliased to relative './components/Navbar' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:1:1
+Error: Module not found: Can't resolve '@/components/Navbar'
+[31m[1m>[0m [90m1 |[0m [36mimport[0m { [33mNavbar[0m } [36mfrom[0m [32m"@/components/Navbar"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m2 |[0m [36mimport[0m { [33mCustomCursor[0m } [36mfrom[0m [32m"@/components/CustomCursor"[0m;
+  [90m3 |[0m [36mimport[0m { [33mHero[0m } [36mfrom[0m [32m"@/components/Hero"[0m;
+  [90m4 |[0m [36mimport[0m { [33mAbout[0m } [36mfrom[0m [32m"@/components/About"[0m;
+
+Import map: aliased to relative './components/Navbar' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:1:1
+Error: Module not found: Can't resolve '@/components/Navbar'
+[31m[1m>[0m [90m1 |[0m [36mimport[0m { [33mNavbar[0m } [36mfrom[0m [32m"@/components/Navbar"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m2 |[0m [36mimport[0m { [33mCustomCursor[0m } [36mfrom[0m [32m"@/components/CustomCursor"[0m;
+  [90m3 |[0m [36mimport[0m { [33mHero[0m } [36mfrom[0m [32m"@/components/Hero"[0m;
+  [90m4 |[0m [36mimport[0m { [33mAbout[0m } [36mfrom[0m [32m"@/components/About"[0m;
+
+Import map: aliased to relative './components/Navbar' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:1:1
+Error: Module not found: Can't resolve '@/components/Navbar'
+[31m[1m>[0m [90m1 |[0m [36mimport[0m { [33mNavbar[0m } [36mfrom[0m [32m"@/components/Navbar"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m2 |[0m [36mimport[0m { [33mCustomCursor[0m } [36mfrom[0m [32m"@/components/CustomCursor"[0m;
+  [90m3 |[0m [36mimport[0m { [33mHero[0m } [36mfrom[0m [32m"@/components/Hero"[0m;
+  [90m4 |[0m [36mimport[0m { [33mAbout[0m } [36mfrom[0m [32m"@/components/About"[0m;
+
+Import map: aliased to relative './components/Navbar' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+✓ Compiled in 150ms
+[browser] ./app/page.tsx:1:1
+Error: Module not found: Can't resolve '@/components/Navbar'
+> 1 | import { Navbar } from "@/components/Navbar";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import { CustomCursor } from "@/components/CustomCursor";
+  3 | import { Hero } from "@/components/Hero";
+  4 | import { About } from "@/components/About";
+
+Import map: aliased to relative './components/Navbar' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found 
+⨯ ./app/page.tsx:1:1
+Error: Module not found: Can't resolve '@/components/Navbar'
+[31m[1m>[0m [90m1 |[0m [36mimport[0m { [33mNavbar[0m } [36mfrom[0m [32m"@/components/Navbar"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m2 |[0m [36mimport[0m { [33mCustomCursor[0m } [36mfrom[0m [32m"@/components/CustomCursor"[0m;
+  [90m3 |[0m [36mimport[0m { [33mHero[0m } [36mfrom[0m [32m"@/components/Hero"[0m;
+  [90m4 |[0m [36mimport[0m { [33mAbout[0m } [36mfrom[0m [32m"@/components/About"[0m;
+
+Import map: aliased to relative './components/Navbar' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[browser] ./app/page.tsx:1:1
+Error: Module not found: Can't resolve '@/components/Navbar'
+> 1 | import { Navbar } from "@/components/Navbar";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import { CustomCursor } from "@/components/CustomCursor";
+  3 | import { Hero } from "@/components/Hero";
+  4 | import { About } from "@/components/About";
+
+Import map: aliased to relative './components/Navbar' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] ./app/page.tsx:1:1
+Error: Module not found: Can't resolve '@/components/Navbar'
+> 1 | import { Navbar } from "@/components/Navbar";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import { CustomCursor } from "@/components/CustomCursor";
+  3 | import { Hero } from "@/components/Hero";
+  4 | import { About } from "@/components/About";
+
+Import map: aliased to relative './components/Navbar' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] ./app/page.tsx:1:1
+Error: Module not found: Can't resolve '@/components/Navbar'
+> 1 | import { Navbar } from "@/components/Navbar";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import { CustomCursor } from "@/components/CustomCursor";
+  3 | import { Hero } from "@/components/Hero";
+  4 | import { About } from "@/components/About";
+
+Import map: aliased to relative './components/Navbar' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found 
+ GET / 500 in 1467ms (next.js: 1319ms, application-code: 148ms)
+[browser] ./app/page.tsx:1:1
+Error: Module not found: Can't resolve '@/components/Navbar'
+> 1 | import { Navbar } from "@/components/Navbar";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import { CustomCursor } from "@/components/CustomCursor";
+  3 | import { Hero } from "@/components/Hero";
+  4 | import { About } from "@/components/About";
+
+Import map: aliased to relative './components/Navbar' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] Uncaught Error: ./app/page.tsx:1:1
+Error: Module not found: Can't resolve '@/components/Navbar'
+> 1 | import { Navbar } from "@/components/Navbar";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import { CustomCursor } from "@/components/CustomCursor";
+  3 | import { Hero } from "@/components/Hero";
+  4 | import { About } from "@/components/About";
+
+Import map: aliased to relative './components/Navbar' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+    at <unknown> (Error: ./app/page.tsx:1:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (Error: (./app/page.tsx:1:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+[browser] ./app/page.tsx:1:1
+Error: Module not found: Can't resolve '@/components/Navbar'
+> 1 | import { Navbar } from "@/components/Navbar";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import { CustomCursor } from "@/components/CustomCursor";
+  3 | import { Hero } from "@/components/Hero";
+  4 | import { About } from "@/components/About";
+
+Import map: aliased to relative './components/Navbar' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] ./app/page.tsx:1:1
+Error: Module not found: Can't resolve '@/components/Navbar'
+> 1 | import { Navbar } from "@/components/Navbar";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import { CustomCursor } from "@/components/CustomCursor";
+  3 | import { Hero } from "@/components/Hero";
+  4 | import { About } from "@/components/About";
+
+Import map: aliased to relative './components/Navbar' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] ./app/page.tsx:1:1
+Error: Module not found: Can't resolve '@/components/Navbar'
+> 1 | import { Navbar } from "@/components/Navbar";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import { CustomCursor } from "@/components/CustomCursor";
+  3 | import { Hero } from "@/components/Hero";
+  4 | import { About } from "@/components/About";
+
+Import map: aliased to relative './components/Navbar' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found 
+ GET / 200 in 160ms (next.js: 11ms, application-code: 149ms)
+⨯ ./app/page.tsx:4:1
+Error: Module not found: Can't resolve '@/components/About'
+  [90m2 |[0m [36mimport[0m { [33mCustomCursor[0m } [36mfrom[0m [32m"@/components/CustomCursor"[0m;
+  [90m3 |[0m [36mimport[0m { [33mHero[0m } [36mfrom[0m [32m"@/components/Hero"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mAbout[0m } [36mfrom[0m [32m"@/components/About"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { [33mFolderProjects[0m } [36mfrom[0m [32m"@/components/FolderProjects"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThreeDWorks[0m } [36mfrom[0m [32m"@/components/ThreeDWorks"[0m;
+  [90m7 |[0m [36mimport[0m { [33mProcess[0m } [36mfrom[0m [32m"@/components/Process"[0m;
+
+Import map: aliased to relative './components/About' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:4:1
+Error: Module not found: Can't resolve '@/components/About'
+  [90m2 |[0m [36mimport[0m { [33mCustomCursor[0m } [36mfrom[0m [32m"@/components/CustomCursor"[0m;
+  [90m3 |[0m [36mimport[0m { [33mHero[0m } [36mfrom[0m [32m"@/components/Hero"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mAbout[0m } [36mfrom[0m [32m"@/components/About"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { [33mFolderProjects[0m } [36mfrom[0m [32m"@/components/FolderProjects"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThreeDWorks[0m } [36mfrom[0m [32m"@/components/ThreeDWorks"[0m;
+  [90m7 |[0m [36mimport[0m { [33mProcess[0m } [36mfrom[0m [32m"@/components/Process"[0m;
+
+Import map: aliased to relative './components/About' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:4:1
+Error: Module not found: Can't resolve '@/components/About'
+  [90m2 |[0m [36mimport[0m { [33mCustomCursor[0m } [36mfrom[0m [32m"@/components/CustomCursor"[0m;
+  [90m3 |[0m [36mimport[0m { [33mHero[0m } [36mfrom[0m [32m"@/components/Hero"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mAbout[0m } [36mfrom[0m [32m"@/components/About"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { [33mFolderProjects[0m } [36mfrom[0m [32m"@/components/FolderProjects"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThreeDWorks[0m } [36mfrom[0m [32m"@/components/ThreeDWorks"[0m;
+  [90m7 |[0m [36mimport[0m { [33mProcess[0m } [36mfrom[0m [32m"@/components/Process"[0m;
+
+Import map: aliased to relative './components/About' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:4:1
+Error: Module not found: Can't resolve '@/components/About'
+  [90m2 |[0m [36mimport[0m { [33mCustomCursor[0m } [36mfrom[0m [32m"@/components/CustomCursor"[0m;
+  [90m3 |[0m [36mimport[0m { [33mHero[0m } [36mfrom[0m [32m"@/components/Hero"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mAbout[0m } [36mfrom[0m [32m"@/components/About"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { [33mFolderProjects[0m } [36mfrom[0m [32m"@/components/FolderProjects"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThreeDWorks[0m } [36mfrom[0m [32m"@/components/ThreeDWorks"[0m;
+  [90m7 |[0m [36mimport[0m { [33mProcess[0m } [36mfrom[0m [32m"@/components/Process"[0m;
+
+Import map: aliased to relative './components/About' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:4:1
+Error: Module not found: Can't resolve '@/components/About'
+  [90m2 |[0m [36mimport[0m { [33mCustomCursor[0m } [36mfrom[0m [32m"@/components/CustomCursor"[0m;
+  [90m3 |[0m [36mimport[0m { [33mHero[0m } [36mfrom[0m [32m"@/components/Hero"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mAbout[0m } [36mfrom[0m [32m"@/components/About"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { [33mFolderProjects[0m } [36mfrom[0m [32m"@/components/FolderProjects"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThreeDWorks[0m } [36mfrom[0m [32m"@/components/ThreeDWorks"[0m;
+  [90m7 |[0m [36mimport[0m { [33mProcess[0m } [36mfrom[0m [32m"@/components/Process"[0m;
+
+Import map: aliased to relative './components/About' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:4:1
+Error: Module not found: Can't resolve '@/components/About'
+  [90m2 |[0m [36mimport[0m { [33mCustomCursor[0m } [36mfrom[0m [32m"@/components/CustomCursor"[0m;
+  [90m3 |[0m [36mimport[0m { [33mHero[0m } [36mfrom[0m [32m"@/components/Hero"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mAbout[0m } [36mfrom[0m [32m"@/components/About"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { [33mFolderProjects[0m } [36mfrom[0m [32m"@/components/FolderProjects"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThreeDWorks[0m } [36mfrom[0m [32m"@/components/ThreeDWorks"[0m;
+  [90m7 |[0m [36mimport[0m { [33mProcess[0m } [36mfrom[0m [32m"@/components/Process"[0m;
+
+Import map: aliased to relative './components/About' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:4:1
+Error: Module not found: Can't resolve '@/components/About'
+  [90m2 |[0m [36mimport[0m { [33mCustomCursor[0m } [36mfrom[0m [32m"@/components/CustomCursor"[0m;
+  [90m3 |[0m [36mimport[0m { [33mHero[0m } [36mfrom[0m [32m"@/components/Hero"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mAbout[0m } [36mfrom[0m [32m"@/components/About"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { [33mFolderProjects[0m } [36mfrom[0m [32m"@/components/FolderProjects"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThreeDWorks[0m } [36mfrom[0m [32m"@/components/ThreeDWorks"[0m;
+  [90m7 |[0m [36mimport[0m { [33mProcess[0m } [36mfrom[0m [32m"@/components/Process"[0m;
+
+Import map: aliased to relative './components/About' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:4:1
+Error: Module not found: Can't resolve '@/components/About'
+  [90m2 |[0m [36mimport[0m { [33mCustomCursor[0m } [36mfrom[0m [32m"@/components/CustomCursor"[0m;
+  [90m3 |[0m [36mimport[0m { [33mHero[0m } [36mfrom[0m [32m"@/components/Hero"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mAbout[0m } [36mfrom[0m [32m"@/components/About"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { [33mFolderProjects[0m } [36mfrom[0m [32m"@/components/FolderProjects"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThreeDWorks[0m } [36mfrom[0m [32m"@/components/ThreeDWorks"[0m;
+  [90m7 |[0m [36mimport[0m { [33mProcess[0m } [36mfrom[0m [32m"@/components/Process"[0m;
+
+Import map: aliased to relative './components/About' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+✓ Compiled in 140ms
+ GET / 200 in 26ms (next.js: 10ms, application-code: 16ms)
+⨯ ./app/page.tsx:5:1
+Error: Module not found: Can't resolve '@/components/FolderProjects'
+  [90m3 |[0m [36mimport[0m { [33mHero[0m } [36mfrom[0m [32m"@/components/Hero"[0m;
+  [90m4 |[0m [36mimport[0m { [33mAbout[0m } [36mfrom[0m [32m"@/components/About"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mFolderProjects[0m } [36mfrom[0m [32m"@/components/FolderProjects"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mThreeDWorks[0m } [36mfrom[0m [32m"@/components/ThreeDWorks"[0m;
+  [90m7 |[0m [36mimport[0m { [33mProcess[0m } [36mfrom[0m [32m"@/components/Process"[0m;
+  [90m8 |[0m [36mimport[0m { [33mTools[0m } [36mfrom[0m [32m"@/components/Tools"[0m;
+
+Import map: aliased to relative './components/FolderProjects' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:5:1
+Error: Module not found: Can't resolve '@/components/FolderProjects'
+  [90m3 |[0m [36mimport[0m { [33mHero[0m } [36mfrom[0m [32m"@/components/Hero"[0m;
+  [90m4 |[0m [36mimport[0m { [33mAbout[0m } [36mfrom[0m [32m"@/components/About"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mFolderProjects[0m } [36mfrom[0m [32m"@/components/FolderProjects"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mThreeDWorks[0m } [36mfrom[0m [32m"@/components/ThreeDWorks"[0m;
+  [90m7 |[0m [36mimport[0m { [33mProcess[0m } [36mfrom[0m [32m"@/components/Process"[0m;
+  [90m8 |[0m [36mimport[0m { [33mTools[0m } [36mfrom[0m [32m"@/components/Tools"[0m;
+
+Import map: aliased to relative './components/FolderProjects' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:5:1
+Error: Module not found: Can't resolve '@/components/FolderProjects'
+  [90m3 |[0m [36mimport[0m { [33mHero[0m } [36mfrom[0m [32m"@/components/Hero"[0m;
+  [90m4 |[0m [36mimport[0m { [33mAbout[0m } [36mfrom[0m [32m"@/components/About"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mFolderProjects[0m } [36mfrom[0m [32m"@/components/FolderProjects"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mThreeDWorks[0m } [36mfrom[0m [32m"@/components/ThreeDWorks"[0m;
+  [90m7 |[0m [36mimport[0m { [33mProcess[0m } [36mfrom[0m [32m"@/components/Process"[0m;
+  [90m8 |[0m [36mimport[0m { [33mTools[0m } [36mfrom[0m [32m"@/components/Tools"[0m;
+
+Import map: aliased to relative './components/FolderProjects' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:5:1
+Error: Module not found: Can't resolve '@/components/FolderProjects'
+  [90m3 |[0m [36mimport[0m { [33mHero[0m } [36mfrom[0m [32m"@/components/Hero"[0m;
+  [90m4 |[0m [36mimport[0m { [33mAbout[0m } [36mfrom[0m [32m"@/components/About"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mFolderProjects[0m } [36mfrom[0m [32m"@/components/FolderProjects"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mThreeDWorks[0m } [36mfrom[0m [32m"@/components/ThreeDWorks"[0m;
+  [90m7 |[0m [36mimport[0m { [33mProcess[0m } [36mfrom[0m [32m"@/components/Process"[0m;
+  [90m8 |[0m [36mimport[0m { [33mTools[0m } [36mfrom[0m [32m"@/components/Tools"[0m;
+
+Import map: aliased to relative './components/FolderProjects' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:5:1
+Error: Module not found: Can't resolve '@/components/FolderProjects'
+  [90m3 |[0m [36mimport[0m { [33mHero[0m } [36mfrom[0m [32m"@/components/Hero"[0m;
+  [90m4 |[0m [36mimport[0m { [33mAbout[0m } [36mfrom[0m [32m"@/components/About"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mFolderProjects[0m } [36mfrom[0m [32m"@/components/FolderProjects"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mThreeDWorks[0m } [36mfrom[0m [32m"@/components/ThreeDWorks"[0m;
+  [90m7 |[0m [36mimport[0m { [33mProcess[0m } [36mfrom[0m [32m"@/components/Process"[0m;
+  [90m8 |[0m [36mimport[0m { [33mTools[0m } [36mfrom[0m [32m"@/components/Tools"[0m;
+
+Import map: aliased to relative './components/FolderProjects' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:5:1
+Error: Module not found: Can't resolve '@/components/FolderProjects'
+  [90m3 |[0m [36mimport[0m { [33mHero[0m } [36mfrom[0m [32m"@/components/Hero"[0m;
+  [90m4 |[0m [36mimport[0m { [33mAbout[0m } [36mfrom[0m [32m"@/components/About"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mFolderProjects[0m } [36mfrom[0m [32m"@/components/FolderProjects"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mThreeDWorks[0m } [36mfrom[0m [32m"@/components/ThreeDWorks"[0m;
+  [90m7 |[0m [36mimport[0m { [33mProcess[0m } [36mfrom[0m [32m"@/components/Process"[0m;
+  [90m8 |[0m [36mimport[0m { [33mTools[0m } [36mfrom[0m [32m"@/components/Tools"[0m;
+
+Import map: aliased to relative './components/FolderProjects' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:5:1
+Error: Module not found: Can't resolve '@/components/FolderProjects'
+  [90m3 |[0m [36mimport[0m { [33mHero[0m } [36mfrom[0m [32m"@/components/Hero"[0m;
+  [90m4 |[0m [36mimport[0m { [33mAbout[0m } [36mfrom[0m [32m"@/components/About"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mFolderProjects[0m } [36mfrom[0m [32m"@/components/FolderProjects"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mThreeDWorks[0m } [36mfrom[0m [32m"@/components/ThreeDWorks"[0m;
+  [90m7 |[0m [36mimport[0m { [33mProcess[0m } [36mfrom[0m [32m"@/components/Process"[0m;
+  [90m8 |[0m [36mimport[0m { [33mTools[0m } [36mfrom[0m [32m"@/components/Tools"[0m;
+
+Import map: aliased to relative './components/FolderProjects' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:5:1
+Error: Module not found: Can't resolve '@/components/FolderProjects'
+  [90m3 |[0m [36mimport[0m { [33mHero[0m } [36mfrom[0m [32m"@/components/Hero"[0m;
+  [90m4 |[0m [36mimport[0m { [33mAbout[0m } [36mfrom[0m [32m"@/components/About"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mFolderProjects[0m } [36mfrom[0m [32m"@/components/FolderProjects"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mThreeDWorks[0m } [36mfrom[0m [32m"@/components/ThreeDWorks"[0m;
+  [90m7 |[0m [36mimport[0m { [33mProcess[0m } [36mfrom[0m [32m"@/components/Process"[0m;
+  [90m8 |[0m [36mimport[0m { [33mTools[0m } [36mfrom[0m [32m"@/components/Tools"[0m;
+
+Import map: aliased to relative './components/FolderProjects' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+✓ Compiled in 67ms
+[browser] ./app/page.tsx:4:1
+Error: Module not found: Can't resolve '@/components/About'
+  2 | import { CustomCursor } from "@/components/CustomCursor";
+  3 | import { Hero } from "@/components/Hero";
+> 4 | import { About } from "@/components/About";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { FolderProjects } from "@/components/FolderProjects";
+  6 | import { ThreeDWorks } from "@/components/ThreeDWorks";
+  7 | import { Process } from "@/components/Process";
+
+Import map: aliased to relative './components/About' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] ./app/page.tsx:5:1
+Error: Module not found: Can't resolve '@/components/FolderProjects'
+  3 | import { Hero } from "@/components/Hero";
+  4 | import { About } from "@/components/About";
+> 5 | import { FolderProjects } from "@/components/FolderProjects";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import { ThreeDWorks } from "@/components/ThreeDWorks";
+  7 | import { Process } from "@/components/Process";
+  8 | import { Tools } from "@/components/Tools";
+
+Import map: aliased to relative './components/FolderProjects' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found 
+⨯ ./app/page.tsx:5:1
+Error: Module not found: Can't resolve '@/components/FolderProjects'
+  [90m3 |[0m [36mimport[0m { [33mHero[0m } [36mfrom[0m [32m"@/components/Hero"[0m;
+  [90m4 |[0m [36mimport[0m { [33mAbout[0m } [36mfrom[0m [32m"@/components/About"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mFolderProjects[0m } [36mfrom[0m [32m"@/components/FolderProjects"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mThreeDWorks[0m } [36mfrom[0m [32m"@/components/ThreeDWorks"[0m;
+  [90m7 |[0m [36mimport[0m { [33mProcess[0m } [36mfrom[0m [32m"@/components/Process"[0m;
+  [90m8 |[0m [36mimport[0m { [33mTools[0m } [36mfrom[0m [32m"@/components/Tools"[0m;
+
+Import map: aliased to relative './components/FolderProjects' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ GET / 500 in 25ms (next.js: 16ms, application-code: 9ms)
+[browser] Uncaught Error: ./app/page.tsx:5:1
+Error: Module not found: Can't resolve '@/components/FolderProjects'
+  3 | import { Hero } from "@/components/Hero";
+  4 | import { About } from "@/components/About";
+> 5 | import { FolderProjects } from "@/components/FolderProjects";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import { ThreeDWorks } from "@/components/ThreeDWorks";
+  7 | import { Process } from "@/components/Process";
+  8 | import { Tools } from "@/components/Tools";
+
+Import map: aliased to relative './components/FolderProjects' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+    at <unknown> (Error: ./app/page.tsx:5:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (Error: (./app/page.tsx:5:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+[browser] ./app/page.tsx:5:1
+Error: Module not found: Can't resolve '@/components/FolderProjects'
+  3 | import { Hero } from "@/components/Hero";
+  4 | import { About } from "@/components/About";
+> 5 | import { FolderProjects } from "@/components/FolderProjects";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import { ThreeDWorks } from "@/components/ThreeDWorks";
+  7 | import { Process } from "@/components/Process";
+  8 | import { Tools } from "@/components/Tools";
+
+Import map: aliased to relative './components/FolderProjects' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] ./app/page.tsx:5:1
+Error: Module not found: Can't resolve '@/components/FolderProjects'
+  3 | import { Hero } from "@/components/Hero";
+  4 | import { About } from "@/components/About";
+> 5 | import { FolderProjects } from "@/components/FolderProjects";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import { ThreeDWorks } from "@/components/ThreeDWorks";
+  7 | import { Process } from "@/components/Process";
+  8 | import { Tools } from "@/components/Tools";
+
+Import map: aliased to relative './components/FolderProjects' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found 
+ GET / 200 in 167ms (next.js: 8ms, application-code: 159ms)
+⨯ ./app/page.tsx:6:1
+Error: Module not found: Can't resolve '@/components/ThreeDWorks'
+  [90m4 |[0m [36mimport[0m { [33mAbout[0m } [36mfrom[0m [32m"@/components/About"[0m;
+  [90m5 |[0m [36mimport[0m { [33mFolderProjects[0m } [36mfrom[0m [32m"@/components/FolderProjects"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mThreeDWorks[0m } [36mfrom[0m [32m"@/components/ThreeDWorks"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mProcess[0m } [36mfrom[0m [32m"@/components/Process"[0m;
+  [90m8 |[0m [36mimport[0m { [33mTools[0m } [36mfrom[0m [32m"@/components/Tools"[0m;
+  [90m9 |[0m [36mimport[0m { [33mContact[0m } [36mfrom[0m [32m"@/components/Contact"[0m;
+
+Import map: aliased to relative './components/ThreeDWorks' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:6:1
+Error: Module not found: Can't resolve '@/components/ThreeDWorks'
+  [90m4 |[0m [36mimport[0m { [33mAbout[0m } [36mfrom[0m [32m"@/components/About"[0m;
+  [90m5 |[0m [36mimport[0m { [33mFolderProjects[0m } [36mfrom[0m [32m"@/components/FolderProjects"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mThreeDWorks[0m } [36mfrom[0m [32m"@/components/ThreeDWorks"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mProcess[0m } [36mfrom[0m [32m"@/components/Process"[0m;
+  [90m8 |[0m [36mimport[0m { [33mTools[0m } [36mfrom[0m [32m"@/components/Tools"[0m;
+  [90m9 |[0m [36mimport[0m { [33mContact[0m } [36mfrom[0m [32m"@/components/Contact"[0m;
+
+Import map: aliased to relative './components/ThreeDWorks' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:6:1
+Error: Module not found: Can't resolve '@/components/ThreeDWorks'
+  [90m4 |[0m [36mimport[0m { [33mAbout[0m } [36mfrom[0m [32m"@/components/About"[0m;
+  [90m5 |[0m [36mimport[0m { [33mFolderProjects[0m } [36mfrom[0m [32m"@/components/FolderProjects"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mThreeDWorks[0m } [36mfrom[0m [32m"@/components/ThreeDWorks"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mProcess[0m } [36mfrom[0m [32m"@/components/Process"[0m;
+  [90m8 |[0m [36mimport[0m { [33mTools[0m } [36mfrom[0m [32m"@/components/Tools"[0m;
+  [90m9 |[0m [36mimport[0m { [33mContact[0m } [36mfrom[0m [32m"@/components/Contact"[0m;
+
+Import map: aliased to relative './components/ThreeDWorks' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:6:1
+Error: Module not found: Can't resolve '@/components/ThreeDWorks'
+  [90m4 |[0m [36mimport[0m { [33mAbout[0m } [36mfrom[0m [32m"@/components/About"[0m;
+  [90m5 |[0m [36mimport[0m { [33mFolderProjects[0m } [36mfrom[0m [32m"@/components/FolderProjects"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mThreeDWorks[0m } [36mfrom[0m [32m"@/components/ThreeDWorks"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mProcess[0m } [36mfrom[0m [32m"@/components/Process"[0m;
+  [90m8 |[0m [36mimport[0m { [33mTools[0m } [36mfrom[0m [32m"@/components/Tools"[0m;
+  [90m9 |[0m [36mimport[0m { [33mContact[0m } [36mfrom[0m [32m"@/components/Contact"[0m;
+
+Import map: aliased to relative './components/ThreeDWorks' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:6:1
+Error: Module not found: Can't resolve '@/components/ThreeDWorks'
+  [90m4 |[0m [36mimport[0m { [33mAbout[0m } [36mfrom[0m [32m"@/components/About"[0m;
+  [90m5 |[0m [36mimport[0m { [33mFolderProjects[0m } [36mfrom[0m [32m"@/components/FolderProjects"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mThreeDWorks[0m } [36mfrom[0m [32m"@/components/ThreeDWorks"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mProcess[0m } [36mfrom[0m [32m"@/components/Process"[0m;
+  [90m8 |[0m [36mimport[0m { [33mTools[0m } [36mfrom[0m [32m"@/components/Tools"[0m;
+  [90m9 |[0m [36mimport[0m { [33mContact[0m } [36mfrom[0m [32m"@/components/Contact"[0m;
+
+Import map: aliased to relative './components/ThreeDWorks' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:6:1
+Error: Module not found: Can't resolve '@/components/ThreeDWorks'
+  [90m4 |[0m [36mimport[0m { [33mAbout[0m } [36mfrom[0m [32m"@/components/About"[0m;
+  [90m5 |[0m [36mimport[0m { [33mFolderProjects[0m } [36mfrom[0m [32m"@/components/FolderProjects"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mThreeDWorks[0m } [36mfrom[0m [32m"@/components/ThreeDWorks"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mProcess[0m } [36mfrom[0m [32m"@/components/Process"[0m;
+  [90m8 |[0m [36mimport[0m { [33mTools[0m } [36mfrom[0m [32m"@/components/Tools"[0m;
+  [90m9 |[0m [36mimport[0m { [33mContact[0m } [36mfrom[0m [32m"@/components/Contact"[0m;
+
+Import map: aliased to relative './components/ThreeDWorks' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:6:1
+Error: Module not found: Can't resolve '@/components/ThreeDWorks'
+  [90m4 |[0m [36mimport[0m { [33mAbout[0m } [36mfrom[0m [32m"@/components/About"[0m;
+  [90m5 |[0m [36mimport[0m { [33mFolderProjects[0m } [36mfrom[0m [32m"@/components/FolderProjects"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mThreeDWorks[0m } [36mfrom[0m [32m"@/components/ThreeDWorks"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mProcess[0m } [36mfrom[0m [32m"@/components/Process"[0m;
+  [90m8 |[0m [36mimport[0m { [33mTools[0m } [36mfrom[0m [32m"@/components/Tools"[0m;
+  [90m9 |[0m [36mimport[0m { [33mContact[0m } [36mfrom[0m [32m"@/components/Contact"[0m;
+
+Import map: aliased to relative './components/ThreeDWorks' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:6:1
+Error: Module not found: Can't resolve '@/components/ThreeDWorks'
+  [90m4 |[0m [36mimport[0m { [33mAbout[0m } [36mfrom[0m [32m"@/components/About"[0m;
+  [90m5 |[0m [36mimport[0m { [33mFolderProjects[0m } [36mfrom[0m [32m"@/components/FolderProjects"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mThreeDWorks[0m } [36mfrom[0m [32m"@/components/ThreeDWorks"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mProcess[0m } [36mfrom[0m [32m"@/components/Process"[0m;
+  [90m8 |[0m [36mimport[0m { [33mTools[0m } [36mfrom[0m [32m"@/components/Tools"[0m;
+  [90m9 |[0m [36mimport[0m { [33mContact[0m } [36mfrom[0m [32m"@/components/Contact"[0m;
+
+Import map: aliased to relative './components/ThreeDWorks' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+✓ Compiled in 102ms
+[browser] ./app/page.tsx:6:1
+Error: Module not found: Can't resolve '@/components/ThreeDWorks'
+  4 | import { About } from "@/components/About";
+  5 | import { FolderProjects } from "@/components/FolderProjects";
+> 6 | import { ThreeDWorks } from "@/components/ThreeDWorks";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { Process } from "@/components/Process";
+  8 | import { Tools } from "@/components/Tools";
+  9 | import { Contact } from "@/components/Contact";
+
+Import map: aliased to relative './components/ThreeDWorks' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found 
+⨯ ./app/page.tsx:6:1
+Error: Module not found: Can't resolve '@/components/ThreeDWorks'
+  [90m4 |[0m [36mimport[0m { [33mAbout[0m } [36mfrom[0m [32m"@/components/About"[0m;
+  [90m5 |[0m [36mimport[0m { [33mFolderProjects[0m } [36mfrom[0m [32m"@/components/FolderProjects"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mThreeDWorks[0m } [36mfrom[0m [32m"@/components/ThreeDWorks"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mProcess[0m } [36mfrom[0m [32m"@/components/Process"[0m;
+  [90m8 |[0m [36mimport[0m { [33mTools[0m } [36mfrom[0m [32m"@/components/Tools"[0m;
+  [90m9 |[0m [36mimport[0m { [33mContact[0m } [36mfrom[0m [32m"@/components/Contact"[0m;
+
+Import map: aliased to relative './components/ThreeDWorks' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ GET / 500 in 24ms (next.js: 14ms, application-code: 10ms)
+[browser] Uncaught Error: ./app/page.tsx:6:1
+Error: Module not found: Can't resolve '@/components/ThreeDWorks'
+  4 | import { About } from "@/components/About";
+  5 | import { FolderProjects } from "@/components/FolderProjects";
+> 6 | import { ThreeDWorks } from "@/components/ThreeDWorks";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { Process } from "@/components/Process";
+  8 | import { Tools } from "@/components/Tools";
+  9 | import { Contact } from "@/components/Contact";
+
+Import map: aliased to relative './components/ThreeDWorks' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+    at <unknown> (Error: ./app/page.tsx:6:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (Error: (./app/page.tsx:6:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+[browser] ./app/page.tsx:6:1
+Error: Module not found: Can't resolve '@/components/ThreeDWorks'
+  4 | import { About } from "@/components/About";
+  5 | import { FolderProjects } from "@/components/FolderProjects";
+> 6 | import { ThreeDWorks } from "@/components/ThreeDWorks";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { Process } from "@/components/Process";
+  8 | import { Tools } from "@/components/Tools";
+  9 | import { Contact } from "@/components/Contact";
+
+Import map: aliased to relative './components/ThreeDWorks' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] ./app/page.tsx:6:1
+Error: Module not found: Can't resolve '@/components/ThreeDWorks'
+  4 | import { About } from "@/components/About";
+  5 | import { FolderProjects } from "@/components/FolderProjects";
+> 6 | import { ThreeDWorks } from "@/components/ThreeDWorks";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { Process } from "@/components/Process";
+  8 | import { Tools } from "@/components/Tools";
+  9 | import { Contact } from "@/components/Contact";
+
+Import map: aliased to relative './components/ThreeDWorks' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found 
+ GET / 200 in 54ms (next.js: 10ms, application-code: 44ms)
+⨯ ./app/page.tsx:7:1
+Error: Module not found: Can't resolve '@/components/Process'
+  [90m 5 |[0m [36mimport[0m { [33mFolderProjects[0m } [36mfrom[0m [32m"@/components/FolderProjects"[0m;
+  [90m 6 |[0m [36mimport[0m { [33mThreeDWorks[0m } [36mfrom[0m [32m"@/components/ThreeDWorks"[0m;
+[31m[1m>[0m [90m 7 |[0m [36mimport[0m { [33mProcess[0m } [36mfrom[0m [32m"@/components/Process"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 8 |[0m [36mimport[0m { [33mTools[0m } [36mfrom[0m [32m"@/components/Tools"[0m;
+  [90m 9 |[0m [36mimport[0m { [33mContact[0m } [36mfrom[0m [32m"@/components/Contact"[0m;
+  [90m10 |[0m
+
+Import map: aliased to relative './components/Process' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:7:1
+Error: Module not found: Can't resolve '@/components/Process'
+  [90m 5 |[0m [36mimport[0m { [33mFolderProjects[0m } [36mfrom[0m [32m"@/components/FolderProjects"[0m;
+  [90m 6 |[0m [36mimport[0m { [33mThreeDWorks[0m } [36mfrom[0m [32m"@/components/ThreeDWorks"[0m;
+[31m[1m>[0m [90m 7 |[0m [36mimport[0m { [33mProcess[0m } [36mfrom[0m [32m"@/components/Process"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 8 |[0m [36mimport[0m { [33mTools[0m } [36mfrom[0m [32m"@/components/Tools"[0m;
+  [90m 9 |[0m [36mimport[0m { [33mContact[0m } [36mfrom[0m [32m"@/components/Contact"[0m;
+  [90m10 |[0m
+
+Import map: aliased to relative './components/Process' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:7:1
+Error: Module not found: Can't resolve '@/components/Process'
+  [90m 5 |[0m [36mimport[0m { [33mFolderProjects[0m } [36mfrom[0m [32m"@/components/FolderProjects"[0m;
+  [90m 6 |[0m [36mimport[0m { [33mThreeDWorks[0m } [36mfrom[0m [32m"@/components/ThreeDWorks"[0m;
+[31m[1m>[0m [90m 7 |[0m [36mimport[0m { [33mProcess[0m } [36mfrom[0m [32m"@/components/Process"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 8 |[0m [36mimport[0m { [33mTools[0m } [36mfrom[0m [32m"@/components/Tools"[0m;
+  [90m 9 |[0m [36mimport[0m { [33mContact[0m } [36mfrom[0m [32m"@/components/Contact"[0m;
+  [90m10 |[0m
+
+Import map: aliased to relative './components/Process' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:7:1
+Error: Module not found: Can't resolve '@/components/Process'
+  [90m 5 |[0m [36mimport[0m { [33mFolderProjects[0m } [36mfrom[0m [32m"@/components/FolderProjects"[0m;
+  [90m 6 |[0m [36mimport[0m { [33mThreeDWorks[0m } [36mfrom[0m [32m"@/components/ThreeDWorks"[0m;
+[31m[1m>[0m [90m 7 |[0m [36mimport[0m { [33mProcess[0m } [36mfrom[0m [32m"@/components/Process"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 8 |[0m [36mimport[0m { [33mTools[0m } [36mfrom[0m [32m"@/components/Tools"[0m;
+  [90m 9 |[0m [36mimport[0m { [33mContact[0m } [36mfrom[0m [32m"@/components/Contact"[0m;
+  [90m10 |[0m
+
+Import map: aliased to relative './components/Process' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:7:1
+Error: Module not found: Can't resolve '@/components/Process'
+  [90m 5 |[0m [36mimport[0m { [33mFolderProjects[0m } [36mfrom[0m [32m"@/components/FolderProjects"[0m;
+  [90m 6 |[0m [36mimport[0m { [33mThreeDWorks[0m } [36mfrom[0m [32m"@/components/ThreeDWorks"[0m;
+[31m[1m>[0m [90m 7 |[0m [36mimport[0m { [33mProcess[0m } [36mfrom[0m [32m"@/components/Process"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 8 |[0m [36mimport[0m { [33mTools[0m } [36mfrom[0m [32m"@/components/Tools"[0m;
+  [90m 9 |[0m [36mimport[0m { [33mContact[0m } [36mfrom[0m [32m"@/components/Contact"[0m;
+  [90m10 |[0m
+
+Import map: aliased to relative './components/Process' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:7:1
+Error: Module not found: Can't resolve '@/components/Process'
+  [90m 5 |[0m [36mimport[0m { [33mFolderProjects[0m } [36mfrom[0m [32m"@/components/FolderProjects"[0m;
+  [90m 6 |[0m [36mimport[0m { [33mThreeDWorks[0m } [36mfrom[0m [32m"@/components/ThreeDWorks"[0m;
+[31m[1m>[0m [90m 7 |[0m [36mimport[0m { [33mProcess[0m } [36mfrom[0m [32m"@/components/Process"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 8 |[0m [36mimport[0m { [33mTools[0m } [36mfrom[0m [32m"@/components/Tools"[0m;
+  [90m 9 |[0m [36mimport[0m { [33mContact[0m } [36mfrom[0m [32m"@/components/Contact"[0m;
+  [90m10 |[0m
+
+Import map: aliased to relative './components/Process' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:7:1
+Error: Module not found: Can't resolve '@/components/Process'
+  [90m 5 |[0m [36mimport[0m { [33mFolderProjects[0m } [36mfrom[0m [32m"@/components/FolderProjects"[0m;
+  [90m 6 |[0m [36mimport[0m { [33mThreeDWorks[0m } [36mfrom[0m [32m"@/components/ThreeDWorks"[0m;
+[31m[1m>[0m [90m 7 |[0m [36mimport[0m { [33mProcess[0m } [36mfrom[0m [32m"@/components/Process"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 8 |[0m [36mimport[0m { [33mTools[0m } [36mfrom[0m [32m"@/components/Tools"[0m;
+  [90m 9 |[0m [36mimport[0m { [33mContact[0m } [36mfrom[0m [32m"@/components/Contact"[0m;
+  [90m10 |[0m
+
+Import map: aliased to relative './components/Process' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:7:1
+Error: Module not found: Can't resolve '@/components/Process'
+  [90m 5 |[0m [36mimport[0m { [33mFolderProjects[0m } [36mfrom[0m [32m"@/components/FolderProjects"[0m;
+  [90m 6 |[0m [36mimport[0m { [33mThreeDWorks[0m } [36mfrom[0m [32m"@/components/ThreeDWorks"[0m;
+[31m[1m>[0m [90m 7 |[0m [36mimport[0m { [33mProcess[0m } [36mfrom[0m [32m"@/components/Process"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 8 |[0m [36mimport[0m { [33mTools[0m } [36mfrom[0m [32m"@/components/Tools"[0m;
+  [90m 9 |[0m [36mimport[0m { [33mContact[0m } [36mfrom[0m [32m"@/components/Contact"[0m;
+  [90m10 |[0m
+
+Import map: aliased to relative './components/Process' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+✓ Compiled in 157ms
+[browser] ./app/page.tsx:7:1
+Error: Module not found: Can't resolve '@/components/Process'
+   5 | import { FolderProjects } from "@/components/FolderProjects";
+   6 | import { ThreeDWorks } from "@/components/ThreeDWorks";
+>  7 | import { Process } from "@/components/Process";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import { Tools } from "@/components/Tools";
+   9 | import { Contact } from "@/components/Contact";
+  10 |
+
+Import map: aliased to relative './components/Process' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found 
+⨯ ./app/page.tsx:7:1
+Error: Module not found: Can't resolve '@/components/Process'
+  [90m 5 |[0m [36mimport[0m { [33mFolderProjects[0m } [36mfrom[0m [32m"@/components/FolderProjects"[0m;
+  [90m 6 |[0m [36mimport[0m { [33mThreeDWorks[0m } [36mfrom[0m [32m"@/components/ThreeDWorks"[0m;
+[31m[1m>[0m [90m 7 |[0m [36mimport[0m { [33mProcess[0m } [36mfrom[0m [32m"@/components/Process"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 8 |[0m [36mimport[0m { [33mTools[0m } [36mfrom[0m [32m"@/components/Tools"[0m;
+  [90m 9 |[0m [36mimport[0m { [33mContact[0m } [36mfrom[0m [32m"@/components/Contact"[0m;
+  [90m10 |[0m
+
+Import map: aliased to relative './components/Process' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ GET / 500 in 24ms (next.js: 16ms, application-code: 8ms)
+[browser] Uncaught Error: ./app/page.tsx:7:1
+Error: Module not found: Can't resolve '@/components/Process'
+   5 | import { FolderProjects } from "@/components/FolderProjects";
+   6 | import { ThreeDWorks } from "@/components/ThreeDWorks";
+>  7 | import { Process } from "@/components/Process";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import { Tools } from "@/components/Tools";
+   9 | import { Contact } from "@/components/Contact";
+  10 |
+
+Import map: aliased to relative './components/Process' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+    at <unknown> (Error: ./app/page.tsx:7:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (Error: (./app/page.tsx:7:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+[browser] ./app/page.tsx:7:1
+Error: Module not found: Can't resolve '@/components/Process'
+   5 | import { FolderProjects } from "@/components/FolderProjects";
+   6 | import { ThreeDWorks } from "@/components/ThreeDWorks";
+>  7 | import { Process } from "@/components/Process";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import { Tools } from "@/components/Tools";
+   9 | import { Contact } from "@/components/Contact";
+  10 |
+
+Import map: aliased to relative './components/Process' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] ./app/page.tsx:7:1
+Error: Module not found: Can't resolve '@/components/Process'
+   5 | import { FolderProjects } from "@/components/FolderProjects";
+   6 | import { ThreeDWorks } from "@/components/ThreeDWorks";
+>  7 | import { Process } from "@/components/Process";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import { Tools } from "@/components/Tools";
+   9 | import { Contact } from "@/components/Contact";
+  10 |
+
+Import map: aliased to relative './components/Process' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found 
+⨯ ./app/page.tsx:8:1
+Error: Module not found: Can't resolve '@/components/Tools'
+  [90m 6 |[0m [36mimport[0m { [33mThreeDWorks[0m } [36mfrom[0m [32m"@/components/ThreeDWorks"[0m;
+  [90m 7 |[0m [36mimport[0m { [33mProcess[0m } [36mfrom[0m [32m"@/components/Process"[0m;
+[31m[1m>[0m [90m 8 |[0m [36mimport[0m { [33mTools[0m } [36mfrom[0m [32m"@/components/Tools"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 9 |[0m [36mimport[0m { [33mContact[0m } [36mfrom[0m [32m"@/components/Contact"[0m;
+  [90m10 |[0m
+  [90m11 |[0m [36mexport[0m [36mdefault[0m [36mfunction[0m [33mHome[0m() {
+
+Import map: aliased to relative './components/Tools' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:8:1
+Error: Module not found: Can't resolve '@/components/Tools'
+  [90m 6 |[0m [36mimport[0m { [33mThreeDWorks[0m } [36mfrom[0m [32m"@/components/ThreeDWorks"[0m;
+  [90m 7 |[0m [36mimport[0m { [33mProcess[0m } [36mfrom[0m [32m"@/components/Process"[0m;
+[31m[1m>[0m [90m 8 |[0m [36mimport[0m { [33mTools[0m } [36mfrom[0m [32m"@/components/Tools"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 9 |[0m [36mimport[0m { [33mContact[0m } [36mfrom[0m [32m"@/components/Contact"[0m;
+  [90m10 |[0m
+  [90m11 |[0m [36mexport[0m [36mdefault[0m [36mfunction[0m [33mHome[0m() {
+
+Import map: aliased to relative './components/Tools' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[browser] ./app/page.tsx:8:1
+Error: Module not found: Can't resolve '@/components/Tools'
+   6 | import { ThreeDWorks } from "@/components/ThreeDWorks";
+   7 | import { Process } from "@/components/Process";
+>  8 | import { Tools } from "@/components/Tools";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import { Contact } from "@/components/Contact";
+  10 |
+  11 | export default function Home() {
+
+Import map: aliased to relative './components/Tools' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found 
+⨯ ./app/page.tsx:9:1
+Error: Module not found: Can't resolve '@/components/Contact'
+  [90m 7 |[0m [36mimport[0m { [33mProcess[0m } [36mfrom[0m [32m"@/components/Process"[0m;
+  [90m 8 |[0m [36mimport[0m { [33mTools[0m } [36mfrom[0m [32m"@/components/Tools"[0m;
+[31m[1m>[0m [90m 9 |[0m [36mimport[0m { [33mContact[0m } [36mfrom[0m [32m"@/components/Contact"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m10 |[0m
+  [90m11 |[0m [36mexport[0m [36mdefault[0m [36mfunction[0m [33mHome[0m() {
+  [90m12 |[0m   [36mreturn[0m (
+
+Import map: aliased to relative './components/Contact' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:9:1
+Error: Module not found: Can't resolve '@/components/Contact'
+  [90m 7 |[0m [36mimport[0m { [33mProcess[0m } [36mfrom[0m [32m"@/components/Process"[0m;
+  [90m 8 |[0m [36mimport[0m { [33mTools[0m } [36mfrom[0m [32m"@/components/Tools"[0m;
+[31m[1m>[0m [90m 9 |[0m [36mimport[0m { [33mContact[0m } [36mfrom[0m [32m"@/components/Contact"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m10 |[0m
+  [90m11 |[0m [36mexport[0m [36mdefault[0m [36mfunction[0m [33mHome[0m() {
+  [90m12 |[0m   [36mreturn[0m (
+
+Import map: aliased to relative './components/Contact' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[browser] ./app/page.tsx:9:1
+Error: Module not found: Can't resolve '@/components/Contact'
+   7 | import { Process } from "@/components/Process";
+   8 | import { Tools } from "@/components/Tools";
+>  9 | import { Contact } from "@/components/Contact";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  10 |
+  11 | export default function Home() {
+  12 |   return (
+
+Import map: aliased to relative './components/Contact' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found 
+ GET / 200 in 46ms (next.js: 8ms, application-code: 38ms)
+✓ Compiled in 67ms
+ GET / 200 in 34ms (next.js: 12ms, application-code: 23ms)
+[browser] The final argument passed to useEffect changed size between renders. The order and size of this array must remain constant.
+
+Previous: [true]
+Incoming: [] 
+    at CustomCursor (components/CustomCursor.tsx:15:12)
+    at S.scheduleRefresh (chrome-extension://fmkadmapgofadopljbjfkapdkoienihi/build/installHook.js:1:86461)
+    at Set.forEach (<anonymous>)
+  13 |   const raf = useRef<number>(0);
+  14 |
+> 15 |   useEffect(() => {
+     |            ^
+  16 |     const isTouchDevice = "ontouchstart" in window || navigator.maxTouchPoints > 0;
+  17 |     if (isTouchDevice) return;
+  18 | (components/CustomCursor.tsx:15:12)
+ GET / 200 in 25ms (next.js: 9ms, application-code: 15ms)
+ GET / 200 in 52ms (next.js: 6ms, application-code: 46ms)
+ GET / 200 in 48ms (next.js: 8ms, application-code: 40ms)
+ GET / 200 in 48ms (next.js: 11ms, application-code: 37ms)
+✓ Compiled in 540ms
+⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET / 200 in 37ms (next.js: 16ms, application-code: 21ms)
+[browser] Image with src "/images/hero-sculpture.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/images/modular-object.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/images/culture-ui.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+ GET / 200 in 116ms (next.js: 15ms, application-code: 101ms)
+[browser] Image with src "/images/hero-sculpture.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/images/culture-ui.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/images/modular-object.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+ GET / 200 in 47ms (next.js: 10ms, application-code: 37ms)
+[browser] Image with src "/images/hero-sculpture.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/images/culture-ui.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/images/modular-object.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+ GET / 200 in 38ms (next.js: 6ms, application-code: 32ms)
+[browser] Image with src "/images/hero-sculpture.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/images/culture-ui.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/images/modular-object.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/images/culture-ui.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+⨯ ./app/layout.tsx:3:1
+Error: Module not found: Can't resolve './globals.css'
+  [90m1 |[0m [36mimport[0m [36mtype[0m { [33mMetadata[0m } [36mfrom[0m [32m"next"[0m;
+  [90m2 |[0m [36mimport[0m { [33mDM_Sans[0m, [33mInstrument_Serif[0m } [36mfrom[0m [32m"next/font/google"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m
+  [90m5 |[0m [36mconst[0m sans = [33mDM_Sans[0m({
+  [90m6 |[0m   subsets: [[32m"latin"[0m],
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:3:1
+Error: Module not found: Can't resolve './globals.css'
+  [90m1 |[0m [36mimport[0m [36mtype[0m { [33mMetadata[0m } [36mfrom[0m [32m"next"[0m;
+  [90m2 |[0m [36mimport[0m { [33mDM_Sans[0m, [33mInstrument_Serif[0m } [36mfrom[0m [32m"next/font/google"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m
+  [90m5 |[0m [36mconst[0m sans = [33mDM_Sans[0m({
+  [90m6 |[0m   subsets: [[32m"latin"[0m],
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:3:1
+Error: Module not found: Can't resolve './globals.css'
+  [90m1 |[0m [36mimport[0m [36mtype[0m { [33mMetadata[0m } [36mfrom[0m [32m"next"[0m;
+  [90m2 |[0m [36mimport[0m { [33mDM_Sans[0m, [33mInstrument_Serif[0m } [36mfrom[0m [32m"next/font/google"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m
+  [90m5 |[0m [36mconst[0m sans = [33mDM_Sans[0m({
+  [90m6 |[0m   subsets: [[32m"latin"[0m],
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:3:1
+Error: Module not found: Can't resolve './globals.css'
+  [90m1 |[0m [36mimport[0m [36mtype[0m { [33mMetadata[0m } [36mfrom[0m [32m"next"[0m;
+  [90m2 |[0m [36mimport[0m { [33mDM_Sans[0m, [33mInstrument_Serif[0m } [36mfrom[0m [32m"next/font/google"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m
+  [90m5 |[0m [36mconst[0m sans = [33mDM_Sans[0m({
+  [90m6 |[0m   subsets: [[32m"latin"[0m],
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+✓ Compiled in 132ms
+[browser] ./app/layout.tsx:3:1
+Error: Module not found: Can't resolve './globals.css'
+  1 | import type { Metadata } from "next";
+  2 | import { DM_Sans, Instrument_Serif } from "next/font/google";
+> 3 | import "./globals.css";
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const sans = DM_Sans({
+  6 |   subsets: ["latin"],
+
+https://nextjs.org/docs/messages/module-not-found 
+⨯ ./app/layout.tsx:3:1
+Error: Module not found: Can't resolve './globals.css'
+  [90m1 |[0m [36mimport[0m [36mtype[0m { [33mMetadata[0m } [36mfrom[0m [32m"next"[0m;
+  [90m2 |[0m [36mimport[0m { [33mDM_Sans[0m, [33mInstrument_Serif[0m } [36mfrom[0m [32m"next/font/google"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m
+  [90m5 |[0m [36mconst[0m sans = [33mDM_Sans[0m({
+  [90m6 |[0m   subsets: [[32m"latin"[0m],
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ GET / 500 in 27ms (next.js: 19ms, application-code: 9ms)
+[browser] Uncaught Error: ./app/layout.tsx:3:1
+Error: Module not found: Can't resolve './globals.css'
+  1 | import type { Metadata } from "next";
+  2 | import { DM_Sans, Instrument_Serif } from "next/font/google";
+> 3 | import "./globals.css";
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const sans = DM_Sans({
+  6 |   subsets: ["latin"],
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+    at <unknown> (Error: ./app/layout.tsx:3:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (Error: (./app/layout.tsx:3:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+[browser] ./app/layout.tsx:3:1
+Error: Module not found: Can't resolve './globals.css'
+  1 | import type { Metadata } from "next";
+  2 | import { DM_Sans, Instrument_Serif } from "next/font/google";
+> 3 | import "./globals.css";
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const sans = DM_Sans({
+  6 |   subsets: ["latin"],
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] ./app/layout.tsx:3:1
+Error: Module not found: Can't resolve './globals.css'
+  1 | import type { Metadata } from "next";
+  2 | import { DM_Sans, Instrument_Serif } from "next/font/google";
+> 3 | import "./globals.css";
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const sans = DM_Sans({
+  6 |   subsets: ["latin"],
+
+https://nextjs.org/docs/messages/module-not-found 
+ GET / 200 in 46ms (next.js: 8ms, application-code: 38ms)
+ GET / 200 in 25ms (next.js: 10ms, application-code: 16ms)
+ GET / 200 in 23ms (next.js: 9ms, application-code: 15ms)
+✓ Compiled in 73ms
+✓ Compiled in 118ms
+ GET / 200 in 25ms (next.js: 9ms, application-code: 15ms)
+✓ Compiled in 85ms
+ GET / 200 in 59ms (next.js: 24ms, application-code: 35ms)
+ GET / 200 in 37ms (next.js: 4ms, application-code: 32ms)
+ GET / 200 in 23ms (next.js: 9ms, application-code: 15ms)
+✓ Compiled in 71ms
+ GET / 200 in 18ms (next.js: 5ms, application-code: 13ms)
+✓ Compiled in 61ms
+ GET / 200 in 22ms (next.js: 8ms, application-code: 15ms)
+ GET / 200 in 21ms (next.js: 7ms, application-code: 14ms)
+ GET / 200 in 41ms (next.js: 6ms, application-code: 35ms)
+ GET / 200 in 35ms (next.js: 5ms, application-code: 30ms)
+✓ Compiled in 196ms
+ GET / 200 in 185ms (next.js: 19ms, application-code: 167ms)
+ GET / 200 in 37ms (next.js: 7ms, application-code: 30ms)
+ GET / 200 in 20ms (next.js: 6ms, application-code: 14ms)
+ GET / 200 in 20ms (next.js: 6ms, application-code: 13ms)
+ GET / 200 in 37ms (next.js: 4ms, application-code: 32ms)
+✓ Compiled in 96ms
+ GET / 200 in 57ms (next.js: 30ms, application-code: 26ms)
+ GET / 200 in 19ms (next.js: 5ms, application-code: 14ms)
+ GET / 200 in 20ms (next.js: 5ms, application-code: 15ms)
+ GET / 200 in 25ms (next.js: 11ms, application-code: 14ms)
+ GET / 200 in 39ms (next.js: 5ms, application-code: 33ms)
+ GET / 200 in 36ms (next.js: 4ms, application-code: 32ms)
+ GET / 200 in 37ms (next.js: 5ms, application-code: 32ms)
+✓ Compiled in 101ms
+ GET / 200 in 46ms (next.js: 15ms, application-code: 32ms)
+ GET / 200 in 21ms (next.js: 7ms, application-code: 14ms)
+ GET / 200 in 23ms (next.js: 6ms, application-code: 17ms)
+ GET / 200 in 20ms (next.js: 7ms, application-code: 13ms)
+ GET / 200 in 41ms (next.js: 6ms, application-code: 35ms)
+ GET / 200 in 34ms (next.js: 5ms, application-code: 29ms)
+ GET / 200 in 34ms (next.js: 5ms, application-code: 30ms)
+✓ Compiled in 102ms
+ GET / 200 in 36ms (next.js: 5ms, application-code: 31ms)
+ GET / 200 in 38ms (next.js: 5ms, application-code: 34ms)
+ GET / 200 in 37ms (next.js: 6ms, application-code: 31ms)
+[browser] Uncaught NotFoundError: Failed to execute 'releasePointerCapture' on 'Element': No active pointer with the given id is found.
+    at <unknown> (file://C:/Users/ACER/portfolio/.next/dev/static/chunks/node_modules_next_dist_compiled_next-devtools_index_090k2jm.js:3429:8417)
+    at p (file://C:/Users/ACER/portfolio/.next/dev/static/chunks/node_modules_next_dist_compiled_next-devtools_index_090k2jm.js:3429:10287)
+ GET / 200 in 84ms (next.js: 9ms, application-code: 74ms)
+ GET / 200 in 37ms (next.js: 6ms, application-code: 32ms)
+ GET / 200 in 36ms (next.js: 5ms, application-code: 32ms)
+ GET / 200 in 37ms (next.js: 4ms, application-code: 32ms)
+ GET / 200 in 73ms (next.js: 5ms, application-code: 69ms)
+ GET / 200 in 43ms (next.js: 10ms, application-code: 33ms)
+ GET / 200 in 40ms (next.js: 7ms, application-code: 34ms)
+ GET / 200 in 38ms (next.js: 7ms, application-code: 31ms)
+ GET / 200 in 51ms (next.js: 6ms, application-code: 45ms)
+ GET / 200 in 51ms (next.js: 7ms, application-code: 44ms)
+ GET / 200 in 25ms (next.js: 8ms, application-code: 17ms)
+✓ Compiled in 95ms
+ GET / 200 in 18ms (next.js: 6ms, application-code: 12ms)
+ GET / 200 in 63ms (next.js: 6ms, application-code: 57ms)
+[browser] Image with src "/images/hero-sculpture.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/images/culture-ui.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/images/culture-ui.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/images/hero-sculpture.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/images/modular-object.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+ GET / 200 in 50ms (next.js: 5ms, application-code: 44ms)
+[browser] Image with src "/images/culture-ui.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/images/hero-sculpture.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+✓ Compiled in 68ms
+✓ Compiled in 116ms
+ GET / 200 in 46ms (next.js: 5ms, application-code: 41ms)
+ GET / 200 in 58ms (next.js: 8ms, application-code: 50ms)
+ GET / 200 in 43ms (next.js: 4ms, application-code: 38ms)
+ GET / 200 in 127ms (next.js: 20ms, application-code: 106ms)
+ GET / 200 in 84ms (next.js: 9ms, application-code: 76ms)
+ GET / 200 in 45ms (next.js: 5ms, application-code: 41ms)
+✓ Compiled in 155ms
+ GET / 200 in 78ms (next.js: 9ms, application-code: 69ms)
+ GET / 200 in 52ms (next.js: 8ms, application-code: 44ms)
+ GET / 200 in 47ms (next.js: 5ms, application-code: 42ms)
+ GET / 200 in 26ms (next.js: 10ms, application-code: 16ms)
+✓ Compiled in 209ms
+ GET / 200 in 35ms (next.js: 7ms, application-code: 28ms)
+ GET / 200 in 22ms (next.js: 7ms, application-code: 15ms)
+ GET / 200 in 24ms (next.js: 8ms, application-code: 16ms)
+ GET / 200 in 25ms (next.js: 6ms, application-code: 19ms)
+✓ Compiled in 54ms
+ GET / 200 in 18ms (next.js: 5ms, application-code: 14ms)
+ GET / 200 in 73ms (next.js: 16ms, application-code: 57ms)
+ GET / 200 in 33ms (next.js: 8ms, application-code: 26ms)
+✓ Compiled in 228ms
+ GET / 200 in 47ms (next.js: 27ms, application-code: 20ms)
+ GET / 200 in 56ms (next.js: 5ms, application-code: 50ms)
+✓ Compiled in 86ms
+ GET / 200 in 72ms (next.js: 14ms, application-code: 58ms)
+ GET / 200 in 34ms (next.js: 9ms, application-code: 26ms)
+ GET / 200 in 22ms (next.js: 8ms, application-code: 14ms)
+✓ Compiled in 51ms
+ GET / 200 in 43ms (next.js: 17ms, application-code: 26ms)
+ GET / 200 in 30ms (next.js: 9ms, application-code: 21ms)
+ GET / 200 in 17ms (next.js: 4ms, application-code: 13ms)
+✓ Compiled in 89ms
+ GET / 200 in 73ms (next.js: 16ms, application-code: 57ms)
+ GET / 200 in 34ms (next.js: 10ms, application-code: 24ms)
+ GET / 200 in 24ms (next.js: 7ms, application-code: 17ms)
+✓ Compiled in 153ms
+ GET / 200 in 106ms (next.js: 8ms, application-code: 98ms)
+✓ Compiled in 28ms
+✓ Compiled in 70ms
+✓ Compiled in 80ms
+ GET / 200 in 91ms (next.js: 33ms, application-code: 58ms)
+ GET / 200 in 34ms (next.js: 8ms, application-code: 25ms)
+ GET / 200 in 20ms (next.js: 6ms, application-code: 15ms)
+✓ Compiled in 201ms
+✓ Compiled in 69ms
+ GET / 200 in 50ms (next.js: 6ms, application-code: 44ms)
+✓ Compiled in 128ms
+✓ Compiled in 154ms
+ GET / 200 in 48ms (next.js: 8ms, application-code: 40ms)
+✓ Compiled in 144ms
+ GET / 200 in 50ms (next.js: 15ms, application-code: 35ms)
+✓ Compiled in 146ms
