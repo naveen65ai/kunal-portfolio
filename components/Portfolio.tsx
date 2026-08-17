@@ -209,7 +209,13 @@ function Navigation() {
               <a key={href} href={href} data-cursor="Go">{label}</a>
             ))}
           </div>
-          <a className="nav-contact" href="mailto:kkunalkumar0055@gmail.com" data-cursor="Email">
+          <a
+            className="nav-contact"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=kkunalkumar0055%40gmail.com"
+            data-cursor="Email"
+            target="_blank"
+            rel="noreferrer"
+          >
             Let’s talk <ArrowUpRight size={14} weight="bold" />
           </a>
           <button
@@ -541,13 +547,25 @@ function Contact() {
     <section id="contact" className="contact">
       <div className="contact-meta"><span>Have a project?</span><span>Available for selected collaborations</span></div>
       <Reveal>
-        <a className="contact-title" href="mailto:kkunalkumar0055@gmail.com" data-cursor="Email">
+        <a
+          className="contact-title"
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=kkunalkumar0055%40gmail.com"
+          data-cursor="Email"
+          target="_blank"
+          rel="noreferrer"
+        >
           Let’s make<br /><i>something real.</i>
           <ArrowUpRight weight="thin" />
         </a>
       </Reveal>
       <footer>
-        <a href="mailto:kkunalkumar0055@gmail.com">kkunalkumar0055@gmail.com</a>
+        <a
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=kkunalkumar0055%40gmail.com"
+          target="_blank"
+          rel="noreferrer"
+        >
+          kkunalkumar0055@gmail.com
+        </a>
         <span>UI / UX · 3D · Motion</span>
         <span>© {new Date().getFullYear()} Kunal Kumar</span>
       </footer>

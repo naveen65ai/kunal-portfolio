@@ -25,7 +25,13 @@ export function Contact() {
               <p className="body-copy">
                 Available for UI UX design, product visuals, 3D modeling, and portfolio-grade interaction systems.
               </p>
-              <a href="mailto:kkunalkumar0055@gmail.com" className="magnetic-link" data-cursor="Email">
+              <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=kkunalkumar0055%40gmail.com"
+                className="magnetic-link"
+                data-cursor="Email"
+                target="_blank"
+                rel="noreferrer"
+              >
                 kkunalkumar0055@gmail.com <ArrowUpRight size={16} weight="bold" />
               </a>
             </div>
