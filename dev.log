@@ -1612,3 +1612,458 @@ https://nextjs.org/docs/messages/module-not-found
 ✓ Compiled in 144ms
  GET / 200 in 50ms (next.js: 15ms, application-code: 35ms)
 ✓ Compiled in 146ms
+Turbopack build encountered 1 error:
+./app
+Error: Could not find the Next.js package (next/package.json)
+Resolved from: C:\Users\ACER\portfolio\app
+Filesystem root used for resolution: C:\Users\ACER\portfolio
+
+Possible causes:
+  - node_modules is being reorganized by a concurrent install (e.g. pnpm adding a package with a `next` peer dependency). This is transient and should clear once the install completes.
+  - node_modules/next was removed, renamed, or has a broken symlink.
+  - The workspace root is incorrect — see turbopack.root in the Next.js config docs for how to configure it.
+  - In a monorepo, the Next.js package may only exist in a directory above the closest directory containing a package manager lockfile. The workspace root is detected by locating the nearest package manager lockfile.
+  - Next.js is installed globally rather than as a project dependency. This is not supported; install it locally.
+
+Note: To ensure a hermetic build and a portable cache, files outside of the workspace root are not compiled.
+
+https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory
+
+
+⨯ ./node_modules/next/dist/esm/client/components/router-reducer/is-navigating-to-new-root-layout.js
+Error: Module not found: Can't resolve '../../../shared/lib/app-router-types'
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/next/dist/esm/client/components/router-reducer/is-navigating-to-new-root-layout.js
+Error: Module not found: Can't resolve '../../../shared/lib/app-router-types'
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/next/dist/client/dev/hot-reloader/get-socket-url.js
+Error: Module not found: Can't resolve '../../../shared/lib/normalized-asset-prefix'
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/next/dist/client/components/segment-cache/cache.js
+Error: Module not found: Can't resolve '../../../shared/lib/promise-with-resolvers'
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/next/dist/client/components/segment-cache/cache.js
+Error: Module not found: Can't resolve '../../../shared/lib/segment'
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/next/dist/client/components/segment-cache/cache.js
+Error: Module not found: Can't resolve '../../../shared/lib/segment-cache/vary-params-decoding'
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/next/dist/client/components/segment-cache/cache.js
+Error: Module not found: Can't resolve '../../navigation-build-id'
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/next/dist/shared/lib/router/utils/disable-smooth-scroll.js
+Error: Module not found: Can't resolve '../../utils/warn-once'
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/next/dist/client/components/segment-cache/cache.js
+Error: Module not found: Can't resolve '../app-router-headers'
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/next/dist/client/components/builtin/global-error.js
+Error: Module not found: Can't resolve '../handle-isr-error'
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/next/dist/client/app-index.js
+Error: Module not found: Can't resolve '../next-devtools/userspace/app/client-entry'
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/next/dist/client/components/segment-cache/cache.js
+Error: Module not found: Can't resolve '../router-reducer/reducers/navigate-reducer'
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/next/dist/client/components/segment-cache/cache.js
+Error: Module not found: Can't resolve './cache-key'
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/next/dist/client/components/segment-cache/cache.js
+Error: Module not found: Can't resolve './cache-map'
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/next/dist/esm/client/components/client-page.js
+Error: Module not found: Can't resolve './client-page.js'
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/next/dist/esm/client/components/client-page.js
+Error: Module not found: Can't resolve './client-page.js'
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/next/dist/client/app-index.js
+Error: Module not found: Can't resolve './components/app-router'
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/next/dist/client/app-index.js
+Error: Module not found: Can't resolve './components/app-router-instance'
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/next/dist/client/app-index.js
+Error: Module not found: Can't resolve './dev/hot-reloader/app/web-socket'
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/next/dist/client/components/builtin/global-error.js
+Error: Module not found: Can't resolve './error-styles'
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/next/dist/client/app-index.js
+Error: Module not found: Can't resolve './flight-data-helpers'
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/next/dist/esm/client/components/navigation.react-server.js
+Error: Module not found: Can't resolve './forbidden'
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/next/dist/client/components/segment-cache/cache-map.js
+Error: Module not found: Can't resolve './lru'
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/next/dist/client/components/segment-cache/cache.js
+Error: Module not found: Can't resolve './navigation'
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/next/dist/client/app-index.js
+Error: Module not found: Can't resolve './navigation-build-id'
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/next/dist/esm/client/components/navigation.react-server.js
+Error: Module not found: Can't resolve './not-found'
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/next/dist/client/components/segment-cache/cache.js
+Error: Module not found: Can't resolve './optimistic-routes'
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/next/dist/client/app-index.js
+Error: Module not found: Can't resolve './react-client-callbacks/error-boundary-callbacks'
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/next/dist/esm/client/components/navigation.react-server.js
+Error: Module not found: Can't resolve './readonly-url-search-params'
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/next/dist/esm/client/components/navigation.react-server.js
+Error: Module not found: Can't resolve './readonly-url-search-params'
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/next/dist/esm/client/components/navigation.react-server.js
+Error: Module not found: Can't resolve './redirect'
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/next/dist/esm/server/web/spec-extension/adapters/headers.js
+Error: Module not found: Can't resolve './reflect'
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/next/dist/esm/server/web/spec-extension/adapters/headers.js
+Error: Module not found: Can't resolve './reflect'
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/next/dist/esm/client/components/navigation.react-server.js
+Error: Module not found: Can't resolve './unauthorized'
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/next/dist/esm/client/components/navigation.react-server.js
+Error: Module not found: Can't resolve './unstable-rethrow'
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/next/dist/client/components/segment-cache/cache.js
+Error: Module not found: Can't resolve './vary-path'
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/next/dist/client/components/builtin/global-error.js
+Error: Module not found: Can't resolve 'react'
+Import map: aliased to module 'next' with subpath '/dist/compiled/react' inside of [project]/app
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/next/dist/esm/server/app-render/rsc/preloads.js
+Error: Module not found: Can't resolve 'react-dom'
+Import map: aliased to module 'next' with subpath '/dist/server/route-modules/app-page/vendored/rsc/react-dom' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/next/dist/esm/server/app-render/rsc/preloads.js
+Error: Module not found: Can't resolve 'react-dom'
+Import map: aliased to module 'next' with subpath '/dist/server/route-modules/app-page/vendored/rsc/react-dom' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/next/dist/client/app-index.js
+Error: Module not found: Can't resolve 'react/jsx-runtime'
+Import map: aliased to module 'next' with subpath '/dist/compiled/react/jsx-runtime' inside of [project]/app
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/next/dist/client/components/builtin/global-error.js
+Error: Module not found: Can't resolve 'react/jsx-runtime'
+Import map: aliased to module 'next' with subpath '/dist/compiled/react/jsx-runtime' inside of [project]/app
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+✓ Compiled in 6.7s
+[browser] ./app
+Error: Could not find the Next.js package (next/package.json)
+Resolved from: C:\Users\ACER\portfolio\app
+Filesystem root used for resolution: C:\Users\ACER\portfolio
+
+Possible causes:
+  - node_modules is being reorganized by a concurrent install (e.g. pnpm adding a package with a `next` peer dependency). This is transient and should clear once the install completes.
+  - node_modules/next was removed, renamed, or has a broken symlink.
+  - The workspace root is incorrect — see turbopack.root in the Next.js config docs for how to configure it.
+  - In a monorepo, the Next.js package may only exist in a directory above the closest directory containing a package manager lockfile. The workspace root is detected by locating the nearest package manager lockfile.
+  - Next.js is installed globally rather than as a project dependency. This is not supported; install it locally.
+
+Note: To ensure a hermetic build and a portable cache, files outside of the workspace root are not compiled.
+
+https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory 
+[browser] ./app
+Error: Could not find the Next.js package (next/package.json)
+Resolved from: C:\Users\ACER\portfolio\app
+Filesystem root used for resolution: C:\Users\ACER\portfolio
+
+Possible causes:
+  - node_modules is being reorganized by a concurrent install (e.g. pnpm adding a package with a `next` peer dependency). This is transient and should clear once the install completes.
+  - node_modules/next was removed, renamed, or has a broken symlink.
+  - The workspace root is incorrect — see turbopack.root in the Next.js config docs for how to configure it.
+  - In a monorepo, the Next.js package may only exist in a directory above the closest directory containing a package manager lockfile. The workspace root is detected by locating the nearest package manager lockfile.
+  - Next.js is installed globally rather than as a project dependency. This is not supported; install it locally.
+
+Note: To ensure a hermetic build and a portable cache, files outside of the workspace root are not compiled.
+
+https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory 
+[browser] ./app
+Error: Could not find the Next.js package (next/package.json)
+Resolved from: C:\Users\ACER\portfolio\app
+Filesystem root used for resolution: C:\Users\ACER\portfolio
+
+Possible causes:
+  - node_modules is being reorganized by a concurrent install (e.g. pnpm adding a package with a `next` peer dependency). This is transient and should clear once the install completes.
+  - node_modules/next was removed, renamed, or has a broken symlink.
+  - The workspace root is incorrect — see turbopack.root in the Next.js config docs for how to configure it.
+  - In a monorepo, the Next.js package may only exist in a directory above the closest directory containing a package manager lockfile. The workspace root is detected by locating the nearest package manager lockfile.
+  - Next.js is installed globally rather than as a project dependency. This is not supported; install it locally.
+
+Note: To ensure a hermetic build and a portable cache, files outside of the workspace root are not compiled.
+
+https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory 
+[browser] ./app
+Error: Could not find the Next.js package (next/package.json)
+Resolved from: C:\Users\ACER\portfolio\app
+Filesystem root used for resolution: C:\Users\ACER\portfolio
+
+Possible causes:
+  - node_modules is being reorganized by a concurrent install (e.g. pnpm adding a package with a `next` peer dependency). This is transient and should clear once the install completes.
+  - node_modules/next was removed, renamed, or has a broken symlink.
+  - The workspace root is incorrect — see turbopack.root in the Next.js config docs for how to configure it.
+  - In a monorepo, the Next.js package may only exist in a directory above the closest directory containing a package manager lockfile. The workspace root is detected by locating the nearest package manager lockfile.
+  - Next.js is installed globally rather than as a project dependency. This is not supported; install it locally.
+
+Note: To ensure a hermetic build and a portable cache, files outside of the workspace root are not compiled.
+
+https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory 
+[browser] ./app
+Error: Could not find the Next.js package (next/package.json)
+Resolved from: C:\Users\ACER\portfolio\app
+Filesystem root used for resolution: C:\Users\ACER\portfolio
+
+Possible causes:
+  - node_modules is being reorganized by a concurrent install (e.g. pnpm adding a package with a `next` peer dependency). This is transient and should clear once the install completes.
+  - node_modules/next was removed, renamed, or has a broken symlink.
+  - The workspace root is incorrect — see turbopack.root in the Next.js config docs for how to configure it.
+  - In a monorepo, the Next.js package may only exist in a directory above the closest directory containing a package manager lockfile. The workspace root is detected by locating the nearest package manager lockfile.
+  - Next.js is installed globally rather than as a project dependency. This is not supported; install it locally.
+
+Note: To ensure a hermetic build and a portable cache, files outside of the workspace root are not compiled.
+
+https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory 
+[browser] ./app
+Error: Could not find the Next.js package (next/package.json)
+Resolved from: C:\Users\ACER\portfolio\app
+Filesystem root used for resolution: C:\Users\ACER\portfolio
+
+Possible causes:
+  - node_modules is being reorganized by a concurrent install (e.g. pnpm adding a package with a `next` peer dependency). This is transient and should clear once the install completes.
+  - node_modules/next was removed, renamed, or has a broken symlink.
+  - The workspace root is incorrect — see turbopack.root in the Next.js config docs for how to configure it.
+  - In a monorepo, the Next.js package may only exist in a directory above the closest directory containing a package manager lockfile. The workspace root is detected by locating the nearest package manager lockfile.
+  - Next.js is installed globally rather than as a project dependency. This is not supported; install it locally.
+
+Note: To ensure a hermetic build and a portable cache, files outside of the workspace root are not compiled.
+
+https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory 
+[browser] ./app
+Error: Could not find the Next.js package (next/package.json)
+Resolved from: C:\Users\ACER\portfolio\app
+Filesystem root used for resolution: C:\Users\ACER\portfolio
+
+Possible causes:
+  - node_modules is being reorganized by a concurrent install (e.g. pnpm adding a package with a `next` peer dependency). This is transient and should clear once the install completes.
+  - node_modules/next was removed, renamed, or has a broken symlink.
+  - The workspace root is incorrect — see turbopack.root in the Next.js config docs for how to configure it.
+  - In a monorepo, the Next.js package may only exist in a directory above the closest directory containing a package manager lockfile. The workspace root is detected by locating the nearest package manager lockfile.
+  - Next.js is installed globally rather than as a project dependency. This is not supported; install it locally.
+
+Note: To ensure a hermetic build and a portable cache, files outside of the workspace root are not compiled.
+
+https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory 
+[browser] ./app
+Error: Could not find the Next.js package (next/package.json)
+Resolved from: C:\Users\ACER\portfolio\app
+Filesystem root used for resolution: C:\Users\ACER\portfolio
+
+Possible causes:
+  - node_modules is being reorganized by a concurrent install (e.g. pnpm adding a package with a `next` peer dependency). This is transient and should clear once the install completes.
+  - node_modules/next was removed, renamed, or has a broken symlink.
+  - The workspace root is incorrect — see turbopack.root in the Next.js config docs for how to configure it.
+  - In a monorepo, the Next.js package may only exist in a directory above the closest directory containing a package manager lockfile. The workspace root is detected by locating the nearest package manager lockfile.
+  - Next.js is installed globally rather than as a project dependency. This is not supported; install it locally.
+
+Note: To ensure a hermetic build and a portable cache, files outside of the workspace root are not compiled.
+
+https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory 
+[browser] ./app
+Error: Could not find the Next.js package (next/package.json)
+Resolved from: C:\Users\ACER\portfolio\app
+Filesystem root used for resolution: C:\Users\ACER\portfolio
+
+Possible causes:
+  - node_modules is being reorganized by a concurrent install (e.g. pnpm adding a package with a `next` peer dependency). This is transient and should clear once the install completes.
+  - node_modules/next was removed, renamed, or has a broken symlink.
+  - The workspace root is incorrect — see turbopack.root in the Next.js config docs for how to configure it.
+  - In a monorepo, the Next.js package may only exist in a directory above the closest directory containing a package manager lockfile. The workspace root is detected by locating the nearest package manager lockfile.
+  - Next.js is installed globally rather than as a project dependency. This is not supported; install it locally.
+
+Note: To ensure a hermetic build and a portable cache, files outside of the workspace root are not compiled.
+
+https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory 
+✓ Compiled in 19.7s
+ GET / 200 in 20.6s (next.js: 20.3s, application-code: 312ms)
+ GET / 200 in 19.0s (next.js: 17.9s, application-code: 1082ms)
+ GET / 200 in 403ms (next.js: 183ms, application-code: 220ms)
+ GET / 200 in 406ms (next.js: 148ms, application-code: 257ms)
+ GET / 200 in 405ms (next.js: 221ms, application-code: 183ms)
+ GET / 200 in 115ms (next.js: 23ms, application-code: 92ms)
+ GET / 200 in 398ms (next.js: 38ms, application-code: 360ms)
+ GET / 200 in 56ms (next.js: 13ms, application-code: 44ms)
