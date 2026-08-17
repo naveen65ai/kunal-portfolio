@@ -209,7 +209,7 @@ function Navigation() {
               <a key={href} href={href} data-cursor="Go">{label}</a>
             ))}
           </div>
-          <a className="nav-contact" href="mailto:hello@kunalkumar.design" data-cursor="Email">
+          <a className="nav-contact" href="mailto:kkunalkumar0055@gmail.com" data-cursor="Email">
             Let’s talk <ArrowUpRight size={14} weight="bold" />
           </a>
           <button
@@ -376,9 +376,9 @@ function ArchiveFolder({
 }) {
   const reduce = useReducedMotion();
   const cardTransforms = [
-    { x: "-110%", y: "-100%", rotate: -12, scale: 0.95 },
-    { x: "-50%", y: "-120%", rotate: 0, scale: 1 },
-    { x: "10%", y: "-100%", rotate: 12, scale: 0.95 },
+    { x: "-110%", y: "-72%", rotate: -12, scale: 0.95 },
+    { x: "-50%", y: "-82%", rotate: 0, scale: 1 },
+    { x: "10%", y: "-72%", rotate: 12, scale: 0.95 },
   ] as const;
 
   return (
@@ -541,13 +541,13 @@ function Contact() {
     <section id="contact" className="contact">
       <div className="contact-meta"><span>Have a project?</span><span>Available for selected collaborations</span></div>
       <Reveal>
-        <a className="contact-title" href="mailto:hello@kunalkumar.design" data-cursor="Email">
+        <a className="contact-title" href="mailto:kkunalkumar0055@gmail.com" data-cursor="Email">
           Let’s make<br /><i>something real.</i>
           <ArrowUpRight weight="thin" />
         </a>
       </Reveal>
       <footer>
-        <a href="mailto:hello@kunalkumar.design">hello@kunalkumar.design</a>
+        <a href="mailto:kkunalkumar0055@gmail.com">kkunalkumar0055@gmail.com</a>
         <span>UI / UX · 3D · Motion</span>
         <span>© {new Date().getFullYear()} Kunal Kumar</span>
       </footer>
