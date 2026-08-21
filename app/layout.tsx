@@ -1,35 +1,50 @@
-import type { Metadata } from "next";
-import { DM_Sans, Instrument_Serif } from "next/font/google";
+import type { Metadata, Viewport } from "next";
+import { DynaPuff, Kalam, Nunito_Sans } from "next/font/google";
 import "./globals.css";
 
-const sans = DM_Sans({
+const display = DynaPuff({
   subsets: ["latin"],
-  variable: "--font-sans",
+  variable: "--font-display",
+  weight: "variable",
   display: "swap",
 });
 
-const serif = Instrument_Serif({
+const handwriting = Kalam({
   subsets: ["latin"],
-  variable: "--font-serif",
-  weight: "400",
+  variable: "--font-hand",
+  weight: ["400", "700"],
+  display: "swap",
+});
+
+const body = Nunito_Sans({
+  subsets: ["latin"],
+  variable: "--font-body",
+  weight: "variable",
   display: "swap",
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://kunalkumar.design"),
-  title: "Kunal Kumar — UI/UX Designer & 3D Artist",
+  title: "Kunal Kumar — Designer & 3D Artist",
   description:
-    "Independent UI/UX designer and 3D artist creating product interfaces, visual systems, and digital objects with depth.",
+    "Kunal Kumar turns ideas into bold brands, useful interfaces, expressive 3D visuals, and memorable digital experiences.",
   openGraph: {
-    title: "Kunal Kumar — UI/UX Designer & 3D Artist",
-    description: "Interface, 3D, and motion shaped into memorable digital work.",
-    images: ["/images/hero-sculpture.png"],
+    title: "Kunal Kumar — Designer & 3D Artist",
+    description: "Good design, brighter days — explore Kunal Kumar's portfolio.",
+    images: ["/images/culture-signal-illustrated-v2.png"],
   },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  themeColor: "#fff2df",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${sans.variable} ${serif.variable}`}>
+    <html lang="en" className={`${display.variable} ${handwriting.variable} ${body.variable}`}>
       <body>{children}</body>
     </html>
   );
