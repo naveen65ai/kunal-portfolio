@@ -355,6 +355,7 @@ img {
 }
 
 .hero-floating-title {
+  padding-top: 3.25rem;
   display: flex;
   align-items: flex-end;
   gap: clamp(0.13rem, 0.38vw, 0.4rem);
@@ -376,11 +377,13 @@ img {
 }
 
 .hero-live-tagline {
+  padding: 3.75rem 1.25rem;
+  text-align: end;
   max-width: 33rem;
-  margin: 0;
+  margin: 10;
   font: 700 clamp(1.25rem, 2vw, 1.8rem)/1.42 var(--font-hand), cursive;
-  letter-spacing: 0.012em;
-  word-spacing: 0.12em;
+  letter-spacing: 0.12em;
+  word-spacing: 0.22em;
   text-wrap: balance;
   transform: rotate(-1deg);
 }
