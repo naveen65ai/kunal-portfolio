@@ -7,7 +7,7 @@ import { InteractiveCd } from "@/components/portfolio/InteractiveCd";
 export function CreativePlayground() {
   return (
     <section id="playground" className="creative-playground" aria-labelledby="playground-title">
-      <div className="playground-heading">
+      <div className="playground-heading" data-reveal>
         <p className="hand-label">Experiments / happy accidents</p>
         <h2 id="playground-title">The playground is where useful gets weird.</h2>
       </div>

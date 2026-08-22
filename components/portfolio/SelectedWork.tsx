@@ -46,7 +46,7 @@ const projects: Project[] = [
 
 function ProjectCard({ project }: { project: Project }) {
   return (
-    <article className={`illustrated-work-card ${project.className}`}>
+    <article className={`illustrated-work-card ${project.className}`} data-reveal data-cursor="View project">
       <div className="work-card-image">
         <Image src={project.image} alt={project.alt} fill sizes="(max-width: 760px) 100vw, 60vw" />
       </div>
@@ -66,7 +66,7 @@ function ProjectCard({ project }: { project: Project }) {
 export function SelectedWork() {
   return (
     <section id="work" className="selected-work" aria-labelledby="work-title">
-      <div className="section-intro">
+      <div className="section-intro" data-reveal>
         <p className="hand-label">Selected projects / 2024—2026</p>
         <h2 id="work-title">Work made to be remembered.</h2>
         <p>Useful first. Distinctive always. A selection of interfaces, identities, and digital objects shaped with equal parts logic and feeling.</p>

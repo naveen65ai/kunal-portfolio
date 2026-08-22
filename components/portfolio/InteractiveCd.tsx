@@ -30,6 +30,7 @@ export function InteractiveCd() {
         type="button"
         aria-label={spinning ? "Pause rotating compact disc" : "Play rotating compact disc"}
         aria-pressed={spinning}
+        data-cursor={spinning ? "Pause" : "Spin"}
         onClick={() => setSpinning((isSpinning) => !isSpinning)}
       >
         <span className="cd-disc" aria-hidden="true">

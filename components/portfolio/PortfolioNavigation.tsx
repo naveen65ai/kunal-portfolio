@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { ArrowRight, List, X } from "@phosphor-icons/react";
+import { fireConfetti } from "./Confetti";
 
 const links = [
   { label: "Work", href: "#work" },
@@ -17,6 +18,21 @@ export function PortfolioNavigation() {
   const [menuOpen, setMenuOpen] = useState(false);
   const menuButtonRef = useRef<HTMLButtonElement>(null);
   const firstLinkRef = useRef<HTMLAnchorElement>(null);
+  const clickTimesRef = useRef<number[]>([]);
+  const logoRef = useRef<HTMLAnchorElement>(null);
+
+  const handleLogoClick = () => {
+    const now = performance.now();
+    const recent = clickTimesRef.current.filter((t) => now - t < 1200);
+    recent.push(now);
+    clickTimesRef.current = recent;
+
+    if (recent.length >= 3) {
+      clickTimesRef.current = [];
+      const rect = logoRef.current?.getBoundingClientRect();
+      fireConfetti(rect ? rect.left + rect.width / 2 : undefined, rect ? rect.top + rect.height / 2 : undefined);
+    }
+  };
 
   useEffect(() => {
     if (!menuOpen) return;
@@ -41,7 +57,13 @@ export function PortfolioNavigation() {
 
   return (
     <header className="portfolio-nav">
-      <a className="burst-logo" href="#top" aria-label="Kunal Kumar, back to top">
+      <a
+        ref={logoRef}
+        className="burst-logo"
+        href="#top"
+        aria-label="Kunal Kumar, back to top"
+        onClick={handleLogoClick}
+      >
         <span>KK</span>
       </a>
 

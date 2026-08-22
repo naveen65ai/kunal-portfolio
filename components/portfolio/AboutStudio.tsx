@@ -6,12 +6,12 @@ const capabilities = ["Product & UI design", "Brand systems", "3D direction", "M
 export function AboutStudio() {
   return (
     <section id="about" className="about-studio" aria-labelledby="about-title">
-      <div className="about-heading">
+      <div className="about-heading" data-reveal>
         <p className="hand-label">Hello, I&apos;m Kunal</p>
         <h2 id="about-title">I make the useful unmissable.</h2>
       </div>
 
-      <div className="about-collage">
+      <div className="about-collage" data-reveal>
         <figure className="about-polaroid">
           <div>
             <Image src={processDesk} alt="Illustrated design workbench with wireframes, color cards, and a hand drawing" fill sizes="(max-width: 760px) 88vw, 38vw" />

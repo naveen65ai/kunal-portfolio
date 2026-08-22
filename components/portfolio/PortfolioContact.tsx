@@ -1,4 +1,6 @@
 import { ArrowRight, EnvelopeSimple } from "@phosphor-icons/react/dist/ssr";
+import { CopyEmailButton } from "./CopyEmailButton";
+import { LocalTimeBadge } from "./LocalTimeBadge";
 
 const email = "kkunalkumar0055@gmail.com";
 const gmailUrl =
@@ -12,6 +14,8 @@ export function PortfolioContact() {
       <h2 id="contact-title">Let&apos;s build something people remember.</h2>
       <p className="contact-copy">Tell me what you&apos;re making, where it&apos;s stuck, and what a great outcome looks like. I&apos;ll bring the questions, systems, and visual energy.</p>
 
+      <LocalTimeBadge />
+
       <div className="contact-actions">
         <a className="contact-gmail" href={gmailUrl} target="_blank" rel="noopener noreferrer">
           Open Gmail <ArrowRight aria-hidden="true" weight="bold" />
@@ -20,6 +24,7 @@ export function PortfolioContact() {
         <a className="contact-email" href={`mailto:${email}`}>
           <EnvelopeSimple aria-hidden="true" weight="bold" /> {email}
         </a>
+        <CopyEmailButton email={email} />
       </div>
 
       <div className="contact-footer">
