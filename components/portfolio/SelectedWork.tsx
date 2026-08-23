@@ -67,9 +67,11 @@ export function SelectedWork() {
   return (
     <section id="work" className="selected-work" aria-labelledby="work-title">
       <div className="section-intro" data-reveal>
-        <p className="hand-label">Selected projects / 2024—2026</p>
+        <p className="hand-label">Selected projects </p>
         <h2 id="work-title">Work made to be remembered.</h2>
-        <p>Useful first. Distinctive always. A selection of interfaces, identities, and digital objects shaped with equal parts logic and feeling.</p>
+        <p className="work-discription">
+          Useful first. Distinctive always. A selection of interfaces, identities, and digital objects shaped with equal parts logic and feeling.
+        </p>
       </div>
       <div className="work-layout">{projects.map((project) => <ProjectCard key={project.index} project={project} />)}</div>
     </section>

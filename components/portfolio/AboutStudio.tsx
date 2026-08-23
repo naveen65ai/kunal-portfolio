@@ -1,7 +1,7 @@
 import Image from "next/image";
 import processDesk from "@/public/images/process-desk-illustrated-v2.png";
 
-const capabilities = ["Product & UI design", "Brand systems", "3D direction", "Motion language"];
+const capabilities = ["Product & UI design", "Brand systems", "3D modeling", "Motion Graphics"];
 
 export function AboutStudio() {
   return (

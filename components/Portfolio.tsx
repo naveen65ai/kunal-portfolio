@@ -11,8 +11,7 @@ import { RevealOnScroll } from "./portfolio/RevealOnScroll";
 import { ScrollProgress } from "./portfolio/ScrollProgress";
 import { SelectedWork } from "./portfolio/SelectedWork";
 import { SignalMarquee } from "./portfolio/SignalMarquee";
-import { StatsBand } from "./portfolio/StatsBand";
-import { Testimonials } from "./portfolio/Testimonials";
+
 
 export function Portfolio() {
   return (
@@ -28,12 +27,12 @@ export function Portfolio() {
       <main id="main-content">
         <IllustratedHero />
         <SignalMarquee />
-        <StatsBand />
+     \
         <SelectedWork />
         <AboutStudio />
         <CreativePlayground />
         <DesignProcess />
-        <Testimonials />
+      
         <FaqSection />
       </main>
       <PortfolioContact />
