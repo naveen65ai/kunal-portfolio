@@ -14,6 +14,7 @@ import {
   FolderOpen,
   User,
   ArrowRight,
+  LinkedinLogo,
 } from "@phosphor-icons/react";
 import { soundManager } from "./SoundEffects";
 import { crtManager } from "./CrtScanlines";
@@ -176,6 +177,16 @@ export function CommandMenu({
         navigator.clipboard.writeText("kkunalkumar0055@gmail.com");
         soundManager.playChime();
         alert("Copied kkunalkumar0055@gmail.com to clipboard! 📬");
+        onClose();
+      },
+    },
+    {
+      id: "social-linkedin",
+      title: "Connect with Kunal on LinkedIn",
+      category: "Actions",
+      icon: LinkedinLogo,
+      perform: () => {
+        window.open("https://www.linkedin.com/in/kunal-kunal-kumar-", "_blank");
         onClose();
       },
     },

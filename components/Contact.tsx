@@ -4,7 +4,7 @@ import { ArrowUpRight } from "@phosphor-icons/react";
 import { ScrollReveal } from "./ScrollReveal";
 
 const socials = [
-  { label: "LinkedIn", href: "#" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/kunal-kunal-kumar-" },
   { label: "Behance", href: "#" },
   { label: "Dribbble", href: "#" },
   { label: "Instagram", href: "#" },

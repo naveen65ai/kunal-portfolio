@@ -73,7 +73,7 @@ export function PortfolioContact() {
           <span className="socials-label">Find me across the web:</span>
           <div className="socials-links">
             <a
-              href="https://linkedin.com/in/kunalkumar"
+              href="https://www.linkedin.com/in/kunal-kunal-kumar-"
               target="_blank"
               rel="noopener noreferrer"
               className="social-pill"

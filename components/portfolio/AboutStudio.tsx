@@ -74,13 +74,13 @@ export function AboutStudio() {
       {/* Magic UI Bento Grid Layout */}
       <BentoGrid className="mb-12">
         {/* Bento 1: Studio Workbench Polaroid */}
-        <div className="md:col-span-2 lg:col-span-2">
+        <div className="bento-col-2">
           <Card3DTilt maxTilt={5} scale={1.01} className="h-full">
-            <div className="relative flex flex-col justify-between overflow-hidden rounded-3xl border-2 border-[var(--ink)] bg-[var(--white)] p-6 shadow-[var(--shadow-brutal)] h-full">
+            <div className="bento-studio-card">
               <BorderBeam size={220} duration={14} colorFrom="#1762dc" colorTo="#ffc62f" />
               
-              <div className="relative z-10 flex flex-col md:flex-row gap-6 items-center">
-                <div className="relative h-64 w-full md:w-1/2 overflow-hidden rounded-2xl border-2 border-black/80 shadow-md">
+              <div className="bento-studio-inner">
+                <div className="bento-studio-image-shell">
                   <Image
                     src={processDesk}
                     alt="Illustrated design workbench with wireframes, color cards, and hand drawing"
@@ -88,27 +88,27 @@ export function AboutStudio() {
                     className="object-cover"
                     sizes="(max-width: 760px) 90vw, 30vw"
                   />
-                  <span className="absolute bottom-2 left-2 rounded-md bg-black/80 px-2 py-1 text-[11px] font-mono font-bold text-amber-300 backdrop-blur-sm">
+                  <span className="bento-studio-image-tag">
                     Studio Workbench · Sketch → Ship
                   </span>
                 </div>
 
-                <div className="flex-1">
-                  <div className="inline-flex items-center gap-1.5 rounded-full border border-black/80 bg-amber-100 px-2.5 py-0.5 text-xs font-mono font-bold text-black mb-3">
+                <div className="bento-studio-content">
+                  <div className="bento-philosophy-badge">
                     <Lightning size={14} weight="fill" className="text-amber-600" /> Design Philosophy
                   </div>
-                  <h3 className="font-display text-2xl font-bold text-[var(--ink)] mb-2">
+                  <h3 className="bento-studio-title">
                     High-Leverage Creative Direction
                   </h3>
-                  <p className="text-sm font-medium text-[var(--ink)]/80 leading-relaxed mb-4">
+                  <p className="bento-studio-desc">
                     I operate at the intersection of conversion-tested product design and expressive 3D art.
                     When you work with me, you get systematic design logic in the morning and raytraced caustics in the afternoon.
                   </p>
-                  <div className="flex flex-wrap gap-2">
-                    <span className="inline-flex items-center gap-1 rounded-full border border-black/30 bg-black/5 px-2.5 py-1 text-xs font-bold">
+                  <div className="bento-pills-row">
+                    <span className="bento-pill">
                       <CheckCircle size={13} weight="fill" className="text-emerald-600" /> Rapid 2-4 Week Sprints
                     </span>
-                    <span className="inline-flex items-center gap-1 rounded-full border border-black/30 bg-black/5 px-2.5 py-1 text-xs font-bold">
+                    <span className="bento-pill">
                       <CheckCircle size={13} weight="fill" className="text-emerald-600" /> 100% Production Tokens
                     </span>
                   </div>
@@ -119,7 +119,7 @@ export function AboutStudio() {
         </div>
 
         {/* Bento 2: Real-time India Radar / Time Badge */}
-        <div className="md:col-span-1 lg:col-span-1">
+        <div className="bento-col-1">
           <BentoCard
             name="Worldwide Remote"
             description="Based in India (IST / UTC+5:30), seamlessly collaborating with clients across San Francisco, London, Berlin, and Singapore."
@@ -127,14 +127,14 @@ export function AboutStudio() {
             badge="Q2/Q3 Open"
             Icon={Globe}
           >
-            <div className="flex flex-col gap-3 my-2">
+            <div className="bento-radar-box">
               <LocalTimeBadge />
-              <div className="flex items-center gap-2 rounded-xl border border-black/20 bg-emerald-50 p-3">
-                <span className="relative flex size-3">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
-                  <span className="relative inline-flex size-3 rounded-full bg-emerald-500" />
+              <div className="bento-status-box">
+                <span className="bento-ping-indicator">
+                  <span className="bento-ping-dot" />
+                  <span className="bento-ping-core" />
                 </span>
-                <span className="text-xs font-mono font-bold text-emerald-950">
+                <span className="bento-status-text">
                   Accepting 2 new client sprints
                 </span>
               </div>
@@ -160,7 +160,7 @@ export function AboutStudio() {
         })}
 
         {/* Bento 4: Live Toolstack & Production Mastery (Full Width) */}
-        <div className="col-span-1 md:col-span-2 lg:col-span-3">
+        <div className="bento-col-full">
           <BentoCard
             name="Production Toolstack & Mastery"
             description="Battle-tested design and 3D toolchain engineered for zero friction from wireframes to final production assets."
@@ -168,11 +168,11 @@ export function AboutStudio() {
             badge="Core Suite"
             Icon={Sparkle}
           >
-            <div className="flex flex-wrap gap-2.5 pt-2">
+            <div className="bento-tools-grid">
               {tools.map((tool) => (
                 <span
                   key={tool}
-                  className="inline-flex items-center gap-1.5 rounded-xl border-2 border-black/80 bg-[var(--paper)] px-3.5 py-1.5 text-xs font-bold text-[var(--ink)] shadow-[2px_2px_0px_#171515] transition-all hover:bg-[var(--yellow)] hover:-translate-y-0.5 cursor-pointer"
+                  className="bento-tool-item"
                   onClick={() => soundManager.playClick()}
                 >
                   <CheckCircle size={14} weight="fill" className="text-emerald-600" />

@@ -61,7 +61,6 @@ type ProjectTier = "mvp" | "standard" | "flagship";
 
 import { Card3DTilt } from "@/components/ui/Card3DTilt";
 import { BorderBeam } from "@/components/ui/BorderBeam";
-import { ShimmerButton } from "@/components/ui/ShimmerButton";
 import { soundManager } from "@/components/ui/SoundEffects";
 
 export function ProjectEstimator() {
@@ -264,7 +263,7 @@ export function ProjectEstimator() {
                   })}
                   <li>
                     <Check size={16} weight="bold" className="text-emerald-600 shrink-0" />
-                    <span>Direct 1-on-1 Slack/WhatsApp channel with Kunal</span>
+                    <span>Direct 1-on-1 Slack/WhatsApp channel with me</span>
                   </li>
                   <li>
                     <Check size={16} weight="bold" className="text-emerald-600 shrink-0" />
@@ -273,18 +272,15 @@ export function ProjectEstimator() {
                 </ul>
               </div>
 
-              <ShimmerButton
-                shimmerColor="#ffc62f"
-                background="var(--ink)"
-                className="w-full font-bold text-sm text-white mt-4"
+              <button
+                type="button"
+                className="estimator-submit-btn"
                 onClick={handleInquire}
               >
-                <span className="flex items-center justify-center gap-2">
-                  <PaperPlaneRight size={18} weight="bold" />
-                  Lock In Scope via Gmail
-                  <Sparkle size={16} weight="fill" className="text-amber-400" />
-                </span>
-              </ShimmerButton>
+                <PaperPlaneRight size={20} weight="bold" />
+                <span>Lock In Scope via Gmail</span>
+                <Sparkle size={18} weight="fill" />
+              </button>
 
               <p className="summary-guarantee">
                 🔒 100% Fixed-Price Guarantee · No surprise billing · Fast 24-hr reply
