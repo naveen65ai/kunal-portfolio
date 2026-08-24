@@ -4,10 +4,8 @@ import { useEffect } from "react";
 
 export function RevealOnScroll() {
   useEffect(() => {
-    const targets = document.querySelectorAll<HTMLElement>("[data-reveal]");
-
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      targets.forEach((node) => {
+      document.querySelectorAll<HTMLElement>("[data-reveal]").forEach((node) => {
         node.classList.add("is-revealed");
       });
       return;
@@ -24,16 +22,36 @@ export function RevealOnScroll() {
           }
         });
       },
-      { threshold: 0.12, rootMargin: "0px 0px -8% 0px" },
+      { threshold: 0.05, rootMargin: "0px 0px -2% 0px" },
     );
 
-    targets.forEach((node) => {
-      observer.observe(node);
+    const observeAll = () => {
+      document.querySelectorAll<HTMLElement>("[data-reveal]:not(.is-revealed)").forEach((node) => {
+        // If element is already in the viewport upon insertion, reveal it immediately
+        const rect = node.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          node.classList.add("is-revealed");
+        } else {
+          observer.observe(node);
+        }
+      });
+    };
+
+    observeAll();
+
+    const mutationObserver = new MutationObserver(() => {
+      observeAll();
+    });
+
+    mutationObserver.observe(document.body, {
+      childList: true,
+      subtree: true,
     });
 
     return () => {
       document.documentElement.classList.remove("reveal-armed");
       observer.disconnect();
+      mutationObserver.disconnect();
     };
   }, []);
 

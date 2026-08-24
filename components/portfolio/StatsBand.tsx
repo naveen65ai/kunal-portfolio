@@ -1,19 +1,48 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { Trophy, CheckCircle, Star, TrendUp } from "@phosphor-icons/react";
+import { Card3DTilt } from "@/components/ui/Card3DTilt";
+import { BorderBeam } from "@/components/ui/BorderBeam";
+import { soundManager } from "@/components/ui/SoundEffects";
 
 type Stat = {
   value: number;
   suffix: string;
   label: string;
   note: string;
+  color: string;
 };
 
 const stats: Stat[] = [
-  { value: 3, suffix: "+", label: "Years crafting", note: "UI, brand & 3D" },
-  { value: 40, suffix: "+", label: "Projects shipped", note: "From sketch to launch" },
-  { value: 18, suffix: "+", label: "Happy clients", note: "Startups to studios" },
-  { value: 5, suffix: ".0", label: "Average rating", note: "On every collaboration" },
+  {
+    value: 40,
+    suffix: "+",
+    label: "Projects Shipped",
+    note: "From napkin sketch to live release",
+    color: "var(--cobalt)",
+  },
+  {
+    value: 100,
+    suffix: "%",
+    label: "On-Time Milestone Rate",
+    note: "Zero missed launch deadlines",
+    color: "var(--orange)",
+  },
+  {
+    value: 4,
+    suffix: ".8M+",
+    label: "Client Value & Raised",
+    note: "Measurable commercial impact",
+    color: "var(--green)",
+  },
+  {
+    value: 5,
+    suffix: ".0",
+    label: "Average Rating",
+    note: "On every studio collaboration",
+    color: "var(--yellow)",
+  },
 ];
 
 function easeOutCubic(t: number) {
@@ -43,7 +72,7 @@ function CountUp({ target, suffix }: { target: number; suffix: string }) {
           return;
         }
 
-        const duration = 1400;
+        const duration = 1500;
         const start = performance.now();
         const tick = (now: number) => {
           const progress = Math.min((now - start) / duration, 1);
@@ -75,17 +104,29 @@ function CountUp({ target, suffix }: { target: number; suffix: string }) {
 export function StatsBand() {
   return (
     <section className="stats-band" aria-label="Kunal in numbers">
-      <ol>
-        {stats.map((stat) => (
-          <li key={stat.label}>
-            <p className="stat-value">
-              <CountUp target={stat.value} suffix={stat.suffix} />
-            </p>
-            <p className="stat-label">{stat.label}</p>
-            <p className="stat-note">{stat.note}</p>
-          </li>
-        ))}
-      </ol>
+      <div className="stats-container">
+        <ol className="stats-list">
+          {stats.map((stat, idx) => (
+            <Card3DTilt key={stat.label} maxTilt={6} scale={1.02} className="h-full">
+              <li
+                className="stat-card h-full relative overflow-hidden cursor-pointer"
+                data-reveal
+                onMouseEnter={() => soundManager.playHover()}
+                onClick={() => soundManager.playClick()}
+              >
+                {idx === 0 && (
+                  <BorderBeam size={140} duration={8} colorFrom="#1762dc" colorTo="#ffc62f" />
+                )}
+                <p className="stat-value">
+                  <CountUp target={stat.value} suffix={stat.suffix} />
+                </p>
+                <p className="stat-label">{stat.label}</p>
+                <p className="stat-note">{stat.note}</p>
+              </li>
+            </Card3DTilt>
+          ))}
+        </ol>
+      </div>
     </section>
   );
 }
