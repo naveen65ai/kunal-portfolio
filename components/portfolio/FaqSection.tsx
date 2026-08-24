@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { Plus } from "@phosphor-icons/react/dist/ssr";
-import { soundManager } from "@/components/ui/SoundEffects";
 
 type Faq = {
   question: string;
@@ -26,24 +25,19 @@ const faqs: Faq[] = [
       "Usually within one to two weeks. Small brand sprints and 3D pieces can often slot in sooner — tell me your date and I'll be honest about what fits.",
   },
   {
-    question: "How are your design files and 3D assets delivered?",
+    question: "How are design files and 3D assets delivered?",
     answer:
-      "Structured and production-ready. Clean Figma systems, organized layers, high-res renders, vector assets, and video walkthroughs. You get complete precision, not messy artboards.",
+      "Structured and production-ready. Clean Figma systems, organized layers, high-res renders, vector assets, and video walkthroughs — not messy artboards.",
   },
   {
     question: "Can you handle both design and 3D for one project?",
     answer:
-      "That's the sweet spot. Interface, identity, motion, and 3D from one brain means the work stays coherent instead of stitched together by committee.",
+      "That's the sweet spot. Interface, identity, motion, and 3D from one designer keeps the work coherent instead of stitched together by committee.",
   },
 ];
 
 export function FaqSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
-
-  const handleToggle = (index: number) => {
-    soundManager.playClick();
-    setOpenIndex(openIndex === index ? null : index);
-  };
 
   return (
     <section id="faq" className="faq-section" aria-labelledby="faq-title">
@@ -61,8 +55,7 @@ export function FaqSection() {
                   aria-expanded={isOpen}
                   aria-controls={`faq-panel-${index}`}
                   id={`faq-button-${index}`}
-                  onClick={() => handleToggle(index)}
-                  onMouseEnter={() => soundManager.playHover()}
+                  onClick={() => setOpenIndex(isOpen ? null : index)}
                 >
                   <span>{faq.question}</span>
                   <Plus aria-hidden="true" weight="bold" className="faq-icon" />
@@ -82,10 +75,7 @@ export function FaqSection() {
 
         <p className="faq-outro">
           Something else on your mind?{" "}
-          <a
-            href="#contact"
-            onClick={() => soundManager.playClick()}
-          >
+          <a href="#contact">
             Ask me directly →
           </a>
         </p>

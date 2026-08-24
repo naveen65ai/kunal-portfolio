@@ -1,8 +1,10 @@
 import type { Metadata, Viewport } from "next";
-import { DynaPuff, Kalam, Nunito_Sans } from "next/font/google";
+import { Bricolage_Grotesque, Kalam, Nunito_Sans } from "next/font/google";
 import "./globals.css";
 
-const display = DynaPuff({
+export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://kunalkumar.design";
+
+const display = Bricolage_Grotesque({
   subsets: ["latin"],
   variable: "--font-display",
   weight: "variable",
@@ -24,13 +26,13 @@ const body = Nunito_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://kunalkumar.design"),
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: "Kunal Kumar — Designer & 3D Artist",
+    default: "Kunal Kumar — UI/UX Designer & 3D Artist",
     template: "%s · Kunal Kumar",
   },
   description:
-    "Kunal Kumar turns ideas into bold brands, useful interfaces, expressive 3D visuals, and memorable digital experiences. UI/UX design, brand systems, 3D art & motion from India to the world.",
+    "Independent multidisciplinary designer specializing in product design, UI/UX, branding, motion and 3D experiences.",
   keywords: [
     "UI designer",
     "UX designer",
@@ -40,13 +42,13 @@ export const metadata: Metadata = {
     "Figma designer",
     "web designer portfolio",
   ],
-  authors: [{ name: "Kunal Kumar", url: "https://kunalkumar.design" }],
+  authors: [{ name: "Kunal Kumar", url: SITE_URL }],
   creator: "Kunal Kumar",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Kunal Kumar — Designer & 3D Artist",
+    title: "Kunal Kumar — UI/UX Designer & 3D Artist",
     description:
       "Good design, brighter days — bold brands, useful interfaces, and expressive 3D visuals by Kunal Kumar.",
     url: "/",
@@ -64,7 +66,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Kunal Kumar — Designer & 3D Artist",
+    title: "Kunal Kumar — UI/UX Designer & 3D Artist",
     description:
       "Bold brands, useful interfaces, expressive 3D visuals. Work made to be remembered.",
     images: ["/images/culture-signal-illustrated-v2.png"],
@@ -92,14 +94,20 @@ const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Kunal Kumar",
-  url: "https://kunalkumar.design",
+  url: SITE_URL,
   email: "mailto:kkunalkumar0055@gmail.com",
   jobTitle: "UI/UX Designer & 3D Artist",
   address: {
     "@type": "PostalAddress",
     addressCountry: "IN",
   },
-  knowsAbout: ["User Interface Design", "User Experience Design", "Brand Identity", "3D Art", "Motion Design"],
+  knowsAbout: [
+    "User Interface Design",
+    "User Experience Design",
+    "Brand Identity",
+    "3D Art",
+    "Motion Design",
+  ],
   description:
     "Independent UI/UX designer and 3D artist helping people turn ideas into brands that actually mean something.",
 };

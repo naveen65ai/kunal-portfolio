@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef, useCallback } from "react";
-import { SpeakerHigh, Play, Pause, Disc, Waveform, Sparkle } from "@phosphor-icons/react";
+import { SpeakerHigh, Play, Pause, Waveform } from "@phosphor-icons/react";
 import { soundManager } from "@/components/ui/SoundEffects";
 
 interface SynthKey {

@@ -35,7 +35,6 @@ export function TactilePhysicsSandbox() {
     if (!canvas) return;
 
     const width = canvas.width;
-    const height = canvas.height;
 
     const newObj: PhysicsObject = {
       id: Date.now() + Math.random(),

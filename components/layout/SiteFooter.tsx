@@ -1,24 +1,18 @@
-"use client";
-
+import Link from "next/link";
 import {
   ArrowRight,
   EnvelopeSimple,
-  Sparkle,
   LinkedinLogo,
   TwitterLogo,
   FigmaLogo,
   GithubLogo,
-  PaperPlaneTilt,
-} from "@phosphor-icons/react";
-import { CopyEmailButton } from "./CopyEmailButton";
-import { LocalTimeBadge } from "./LocalTimeBadge";
-import { fireConfetti } from "./Confetti";
+} from "@phosphor-icons/react/dist/ssr";
+import { CopyEmailButton } from "@/components/portfolio/CopyEmailButton";
+import { LocalTimeBadge } from "@/components/portfolio/LocalTimeBadge";
 
-const email = "kkunalkumar0055@gmail.com";
-const gmailUrl =
-  "https://mail.google.com/mail/?view=cm&fs=1&to=kkunalkumar0055%40gmail.com&su=Project%20inquiry%20from%20your%20portfolio";
+const EMAIL = "kkunalkumar0055@gmail.com";
 
-export function PortfolioContact() {
+export function SiteFooter() {
   return (
     <footer id="contact" className="portfolio-contact" aria-labelledby="contact-title">
       <div className="contact-star" aria-hidden="true">
@@ -28,47 +22,33 @@ export function PortfolioContact() {
       </div>
 
       <div className="contact-inner-container">
-        <p className="hand-label">Ready to turn ideas into reality?</p>
-        <h2 id="contact-title">Let&apos;s build something people will remember.</h2>
+        <p className="hand-label">Ready when you are</p>
+        <h2 id="contact-title">Have something interesting in mind? Let&apos;s build it.</h2>
         <p className="contact-copy">
-          Whether you need a full mobile app designed, a brand identity sprint, or bespoke 3D
-          visuals that stop people from scrolling — my calendar is open for ambitious Q3/Q4
-          projects.
+          Product design, brand identity, motion or 3D — tell me what you are working on and I will
+          come back with an honest plan.
         </p>
 
-        {/* Real-Time IST Clock & Availability */}
         <div className="contact-status-row">
           <LocalTimeBadge />
-          <div className="availability-guarantee-pill">
-            <Sparkle size={14} weight="fill" className="text-amber-500" />
-            <span>Response within 24 hours guaranteed</span>
-          </div>
+          <span className="availability-guarantee-pill">Available for select projects — 2026</span>
         </div>
 
-        {/* Primary Action Buttons */}
         <div className="contact-actions">
-          <a
-            className="contact-gmail"
-            href={gmailUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => fireConfetti()}
-          >
-            <PaperPlaneTilt size={20} weight="bold" />
-            <span>Open Direct Gmail Draft</span>
+          <Link className="contact-gmail" href="/contact">
+            Start a Project
             <ArrowRight aria-hidden="true" weight="bold" />
-            <span className="sr-only"> to email Kunal (opens in a new tab)</span>
-          </a>
+            <span className="sr-only"> — go to the project inquiry form</span>
+          </Link>
 
-          <a className="contact-email" href={`mailto:${email}`}>
+          <a className="contact-email" href={`mailto:${EMAIL}?subject=Project%20inquiry%20for%20Kunal`}>
             <EnvelopeSimple aria-hidden="true" weight="bold" size={20} />
-            <span>{email}</span>
+            <span>{EMAIL}</span>
           </a>
 
-          <CopyEmailButton email={email} />
+          <CopyEmailButton email={EMAIL} />
         </div>
 
-        {/* Social Links Row */}
         <div className="contact-socials-row">
           <span className="socials-label">Find me across the web:</span>
           <div className="socials-links">
@@ -111,11 +91,10 @@ export function PortfolioContact() {
           </div>
         </div>
 
-        {/* Bottom Colophon */}
         <div className="contact-footer">
           <span>Kunal Kumar © {new Date().getFullYear()}</span>
-          <span>UI/UX · 3D Art · Brand Systems · Spatial Web</span>
-          <span>India / Working Worldwide 🌍</span>
+          <span>UI/UX · Brand Systems · 3D Art · Motion</span>
+          <span>India / Working Worldwide</span>
         </div>
       </div>
     </footer>
