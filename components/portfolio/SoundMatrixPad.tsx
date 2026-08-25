@@ -1,8 +1,9 @@
 "use client";
 
 import { useState, useEffect, useRef, useCallback } from "react";
-import { SpeakerHigh, Play, Pause, Waveform } from "@phosphor-icons/react";
+import { Play, Pause, Waveform } from "@phosphor-icons/react";
 import { soundManager } from "@/components/ui/SoundEffects";
+import { SoundToggle } from "@/components/ui/SoundToggle";
 
 interface SynthKey {
   id: number;
@@ -182,9 +183,9 @@ export function SoundMatrixPad() {
           )}
         </button>
 
-        <div className="flex items-center gap-1.5 text-xs font-mono font-bold text-[#171515]/60">
-          <SpeakerHigh size={15} weight="bold" />
-          <span>{preset.name}</span>
+        <div className="flex items-center gap-2">
+          <SoundToggle variant="compact" />
+          <span className="text-xs font-mono font-bold text-[#171515]/70 hidden sm:inline">{preset.name}</span>
         </div>
       </div>
     </div>

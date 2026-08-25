@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { ArrowRight, List, X } from "@phosphor-icons/react";
+import { SoundToggle } from "@/components/ui/SoundToggle";
 
 const links = [
   { label: "Work", href: "/work" },
@@ -80,6 +81,7 @@ export function SiteHeader() {
       </nav>
 
       <div className="site-header-actions">
+        <SoundToggle variant="pill" className="hidden sm:inline-flex" />
         <Link className="availability-pill" href="/contact">
           <span className="pulse-dot" aria-hidden="true" />
           <span className="availability-pill-text">Available for projects</span>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { SiteFooter } from "@/components/layout/SiteFooter";
+import { SoundToggle } from "@/components/ui/SoundToggle";
 
 const InteractiveCd = dynamic(() =>
   import("@/components/portfolio/InteractiveCd").then((m) => ({ default: m.InteractiveCd })),
@@ -32,8 +33,13 @@ export default function PlaygroundPage() {
       <main className="subpage-main">
         <header className="subpage-hero">
           <div className="subpage-container">
-            <p className="hand-label">Playground</p>
-            <h1 className="subpage-title">Experiments & unfinished ideas.</h1>
+            <div className="flex flex-wrap items-center justify-between gap-4 mb-2">
+              <div>
+                <p className="hand-label">Playground</p>
+                <h1 className="subpage-title">Experiments & unfinished ideas.</h1>
+              </div>
+              <SoundToggle variant="hero" />
+            </div>
             <p className="subpage-lead">
               3D studies, audio-visual toys and physics prototypes — made purely because they were
               interesting. This is where the experiments live.
