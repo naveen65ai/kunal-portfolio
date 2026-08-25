@@ -6,13 +6,21 @@ class SoundEffectsManager {
   private muted: boolean = true; // muted by default for best user experience
   private listeners: Set<(muted: boolean) => void> = new Set();
 
-  constructor() {
+  private initialized = false;
+
+  private init() {
+    if (this.initialized) return;
+    this.initialized = true;
     if (typeof window !== "undefined") {
       const stored = localStorage.getItem("kunal_portfolio_muted");
       if (stored !== null) {
         this.muted = stored === "true";
       }
     }
+  }
+
+  constructor() {
+    // Defer localStorage read to first access
   }
 
   private getContext(): AudioContext | null {
@@ -30,10 +38,12 @@ class SoundEffectsManager {
   }
 
   public isMuted(): boolean {
+    this.init();
     return this.muted;
   }
 
   public setMuted(muted: boolean) {
+    this.init();
     this.muted = muted;
     if (typeof window !== "undefined") {
       localStorage.setItem("kunal_portfolio_muted", String(muted));
@@ -42,6 +52,7 @@ class SoundEffectsManager {
   }
 
   public toggleMute(): boolean {
+    this.init();
     this.setMuted(!this.muted);
     if (!this.muted) {
       this.playChime();
@@ -50,6 +61,7 @@ class SoundEffectsManager {
   }
 
   public subscribe(listener: (muted: boolean) => void): () => void {
+    this.init();
     this.listeners.add(listener);
     return () => this.listeners.delete(listener);
   }

@@ -224,6 +224,11 @@ export function CommandMenu({
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             className="flex-1 bg-transparent px-3 text-base font-semibold text-[var(--ink)] placeholder:text-[var(--ink)]/40 focus:outline-none"
+            aria-label="Search commands"
+            role="combobox"
+            aria-expanded={filtered.length > 0}
+            aria-controls="command-results-listbox"
+            aria-autocomplete="list"
           />
           <kbd className="hidden sm:inline-block rounded-md border border-black/20 bg-black/5 px-2 py-0.5 text-xs font-mono font-bold text-[var(--ink)]/70">
             ESC
@@ -239,7 +244,12 @@ export function CommandMenu({
         </div>
 
         {/* Results List */}
-        <div className="max-h-[360px] overflow-y-auto p-2 space-y-1">
+        <div
+          className="max-h-[360px] overflow-y-auto p-2 space-y-1"
+          id="command-results-listbox"
+          role="listbox"
+          aria-label="Command results"
+        >
           {filtered.length === 0 ? (
             <div className="p-8 text-center text-sm font-medium text-[var(--ink)]/60">
               No matching commands found for &ldquo;{query}&rdquo;.
@@ -251,6 +261,8 @@ export function CommandMenu({
                 <button
                   key={item.id}
                   type="button"
+                  role="option"
+                  aria-selected={false}
                   onClick={() => {
                     soundManager.playClick();
                     item.perform();

@@ -6,8 +6,11 @@ import { cn } from "@/lib/utils";
 class CrtStateManager {
   private active: boolean = false;
   private listeners: Set<(active: boolean) => void> = new Set();
+  private initialized = false;
 
-  constructor() {
+  private init() {
+    if (this.initialized) return;
+    this.initialized = true;
     if (typeof window !== "undefined") {
       const stored = localStorage.getItem("kunal_portfolio_crt");
       this.active = stored === "true";
@@ -15,10 +18,12 @@ class CrtStateManager {
   }
 
   public isActive(): boolean {
+    this.init();
     return this.active;
   }
 
   public toggle(): boolean {
+    this.init();
     this.active = !this.active;
     if (typeof window !== "undefined") {
       localStorage.setItem("kunal_portfolio_crt", String(this.active));
@@ -28,12 +33,24 @@ class CrtStateManager {
   }
 
   public subscribe(fn: (active: boolean) => void): () => void {
+    this.init();
     this.listeners.add(fn);
     return () => this.listeners.delete(fn);
   }
 }
 
-export const crtManager = new CrtStateManager();
+let _crtManager: CrtStateManager | null = null;
+export function getCrtManager(): CrtStateManager {
+  if (!_crtManager) _crtManager = new CrtStateManager();
+  return _crtManager;
+}
+
+// Lazy singleton that defers localStorage access to first use
+export const crtManager = {
+  isActive: () => getCrtManager().isActive(),
+  toggle: () => getCrtManager().toggle(),
+  subscribe: (fn: (active: boolean) => void) => getCrtManager().subscribe(fn),
+};
 
 export function CrtScanlines() {
   const [active, setActive] = useState(false);

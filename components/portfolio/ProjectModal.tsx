@@ -1,8 +1,8 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useCallback } from "react";
 import Image, { type StaticImageData } from "next/image";
-import { ArrowUpRight, CheckCircle, Clock, Sparkle, X } from "@phosphor-icons/react";
+import { ArrowUpRight, CheckCircle, Clock, X } from "@phosphor-icons/react";
 
 export type ProjectDetail = {
   index: string;
@@ -35,25 +35,54 @@ type ProjectModalProps = {
 export function ProjectModal({ project, onClose }: ProjectModalProps) {
   const modalRef = useRef<HTMLDivElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
+  const previousFocusRef = useRef<HTMLElement | null>(null);
+
+  const handleKeyDown = useCallback(
+    (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        onClose();
+        return;
+      }
+
+      if (e.key === "Tab" && modalRef.current) {
+        const focusable = modalRef.current.querySelectorAll<HTMLElement>(
+          'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+        );
+        if (focusable.length === 0) return;
+
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
+      }
+    },
+    [onClose]
+  );
 
   useEffect(() => {
     if (!project) return;
 
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "Escape") {
-        onClose();
-      }
-    };
-
+    previousFocusRef.current = document.activeElement as HTMLElement;
     document.body.style.overflow = "hidden";
     window.addEventListener("keydown", handleKeyDown);
-    closeButtonRef.current?.focus();
+
+    const focusFrame = window.requestAnimationFrame(() => {
+      closeButtonRef.current?.focus();
+    });
 
     return () => {
+      window.cancelAnimationFrame(focusFrame);
       document.body.style.overflow = "";
       window.removeEventListener("keydown", handleKeyDown);
+      previousFocusRef.current?.focus();
     };
-  }, [project, onClose]);
+  }, [project, handleKeyDown]);
 
   if (!project) return null;
 
@@ -68,7 +97,6 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
       }}
     >
       <div className="project-modal-card" ref={modalRef}>
-        {/* Header Bar */}
         <div className="project-modal-header">
           <div className="project-modal-badges">
             <span className="project-modal-index">{project.index}</span>
@@ -86,9 +114,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
           </button>
         </div>
 
-        {/* Content Body */}
         <div className="project-modal-body">
-          {/* Title & Key Impact Stat */}
           <div className="project-modal-hero">
             <div>
               <p className="hand-label">{project.client}</p>
@@ -97,19 +123,8 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
               </h2>
               <p className="project-modal-tagline">{project.tagline}</p>
             </div>
-
-            {project.metric && (
-              <div className="project-modal-impact-badge">
-                <Sparkle size={22} weight="fill" className="impact-icon" />
-                <div>
-                  <strong className="impact-stat">{project.metric}</strong>
-                  <span className="impact-label">{project.metricLabel}</span>
-                </div>
-              </div>
-            )}
           </div>
 
-          {/* Primary Featured Image */}
           <div className="project-modal-media-frame">
             <Image
               src={project.image}
@@ -121,7 +136,6 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
             />
           </div>
 
-          {/* Key Quick Facts Grid */}
           <div className="project-modal-meta-grid">
             <div className="meta-box">
               <span className="meta-heading">
@@ -139,7 +153,6 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
             </div>
           </div>
 
-          {/* Case Study Details */}
           <div className="project-modal-narrative">
             <div className="narrative-section">
               <h3>The Challenge</h3>
@@ -147,7 +160,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
             </div>
 
             <div className="narrative-section">
-              <h3>The Solution & Design System</h3>
+              <h3>The Solution</h3>
               <p>{project.solution}</p>
             </div>
 
@@ -164,7 +177,6 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
             </div>
           </div>
 
-          {/* Modal Action CTA */}
           <div className="project-modal-actions">
             <a
               href={`https://mail.google.com/mail/?view=cm&fs=1&to=kkunalkumar0055@gmail.com&su=Inquiry%20inspired%20by%20${encodeURIComponent(

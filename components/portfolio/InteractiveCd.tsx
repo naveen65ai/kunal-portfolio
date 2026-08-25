@@ -67,16 +67,6 @@ export function InteractiveCd() {
           />
         </span>
         <span className="cd-glint" aria-hidden="true" />
-
-        {/* Center Spindle & State */}
-        <span className="cd-control-state">
-          {spinning ? (
-            <Pause aria-hidden="true" weight="fill" size={18} />
-          ) : (
-            <Play aria-hidden="true" weight="fill" size={18} />
-          )}
-          {spinning ? "Pause Vinyl" : "Spin Disc"}
-        </span>
       </button>
 
       {/* Turntable Info Display & Equalizer */}
@@ -115,12 +105,12 @@ export function InteractiveCd() {
             <FastForward size={14} weight="bold" /> Next Track
           </button>
           <a
-            className="cd-note"
+            className="turntable-cta-btn"
             href={gmailUrl}
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => soundManager.playClick()}
-            aria-label="Start a project inspired by this vibe; opens Gmail in a new tab"
+            aria-label="Start a project from the compact disc; opens Gmail in a new tab"
           >
             <Sparkle size={14} weight="fill" /> Let&apos;s Build <span>↗</span>
           </a>

@@ -32,8 +32,7 @@ export function PortfolioContact() {
         <h2 id="contact-title">Let&apos;s build something people will remember.</h2>
         <p className="contact-copy">
           Whether you need a full mobile app designed, a brand identity sprint, or bespoke 3D
-          visuals that stop people from scrolling — my calendar is open for ambitious Q3/Q4
-          projects.
+          visuals that stop people from scrolling — I&apos;m available for select projects.
         </p>
 
         {/* Real-Time IST Clock & Availability */}

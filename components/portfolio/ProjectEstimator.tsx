@@ -160,14 +160,15 @@ export function ProjectEstimator() {
 
           {/* Step 2: Select Depth / Tier */}
           <div className="estimator-group">
-            <span className="group-label">
+            <span className="group-label" id="tier-label">
               <span className="step-num">2</span> Project Scope Depth:
             </span>
-            <div className="tier-selector-row">
+            <div className="tier-selector-row" role="group" aria-labelledby="tier-label">
               <button
                 type="button"
                 className={`tier-btn ${tier === "mvp" ? "is-selected" : ""}`}
                 onClick={() => handleSelectTier("mvp")}
+                aria-pressed={tier === "mvp"}
               >
                 <strong>Quick Sprint / MVP</strong>
                 <span>Core essentials & rapid launch</span>
@@ -176,6 +177,7 @@ export function ProjectEstimator() {
                 type="button"
                 className={`tier-btn ${tier === "standard" ? "is-selected" : ""}`}
                 onClick={() => handleSelectTier("standard")}
+                aria-pressed={tier === "standard"}
               >
                 <strong>Full Product Build</strong>
                 <span>Complete design, 3D & token system</span>
@@ -184,6 +186,7 @@ export function ProjectEstimator() {
                 type="button"
                 className={`tier-btn ${tier === "flagship" ? "is-selected" : ""}`}
                 onClick={() => handleSelectTier("flagship")}
+                aria-pressed={tier === "flagship"}
               >
                 <strong>Flagship Overhaul</strong>
                 <span>Deep research, bespoke 3D & spatial web</span>
@@ -193,14 +196,15 @@ export function ProjectEstimator() {
 
           {/* Step 3: Speed Requirement */}
           <div className="estimator-group">
-            <span className="group-label">
+            <span className="group-label" id="pace-label">
               <span className="step-num">3</span> Desired Pace:
             </span>
-            <div className="pace-selector-row">
+            <div className="pace-selector-row" role="group" aria-labelledby="pace-label">
               <button
                 type="button"
                 className={`pace-btn ${timeline === "fast" ? "is-selected" : ""}`}
                 onClick={() => handleSelectTimeline("fast")}
+                aria-pressed={timeline === "fast"}
               >
                 ⚡ Fast Track Sprint
               </button>
@@ -208,6 +212,7 @@ export function ProjectEstimator() {
                 type="button"
                 className={`pace-btn ${timeline === "standard" ? "is-selected" : ""}`}
                 onClick={() => handleSelectTimeline("standard")}
+                aria-pressed={timeline === "standard"}
               >
                 🗓️ Standard Cadence
               </button>
@@ -215,6 +220,7 @@ export function ProjectEstimator() {
                 type="button"
                 className={`pace-btn ${timeline === "flexible" ? "is-selected" : ""}`}
                 onClick={() => handleSelectTimeline("flexible")}
+                aria-pressed={timeline === "flexible"}
               >
                 🤝 Flexible Staged Rollout
               </button>
@@ -233,10 +239,10 @@ export function ProjectEstimator() {
                   <Calculator size={20} weight="bold" />
                   <span className="summary-title">Scope Summary</span>
                 </div>
-                <span className="summary-status-badge">Available for Q3/Q4</span>
+                <span className="summary-status-badge">Available for select projects</span>
               </div>
 
-              <div className="summary-highlight-box">
+              <div className="summary-highlight-box" aria-live="polite">
                 <div className="summary-metric">
                   <span className="metric-label">Estimated Delivery</span>
                   <div className="metric-val-row">

@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from "react";
 import Image from "next/image";
-import { ArrowUpRight, Sparkle, Tag, Eye, MagnifyingGlass, X, Funnel } from "@phosphor-icons/react";
+import { ArrowUpRight, Tag, Eye } from "@phosphor-icons/react";
 import cultureSignal from "@/public/images/culture-signal-illustrated-v2.png";
 import matterMotion from "@/public/images/matter-motion-illustrated-v2.png";
 import modularFutures from "@/public/images/modular-futures-illustrated-v2.png";
@@ -10,8 +10,6 @@ import ribbonStudy from "@/public/images/ribbon-study-illustrated-v2.png";
 import formStudy from "@/public/images/form-study-illustrated-v2.png";
 import processDesk from "@/public/images/process-desk-illustrated-v2.png";
 import { ProjectModal, type ProjectDetail } from "./ProjectModal";
-import { Card3DTilt } from "@/components/ui/Card3DTilt";
-import { BorderBeam } from "@/components/ui/BorderBeam";
 import { soundManager } from "@/components/ui/SoundEffects";
 
 const allProjects: ProjectDetail[] = [
@@ -21,11 +19,11 @@ const allProjects: ProjectDetail[] = [
     category: "product",
     categoryLabel: "Product & UI/UX Direction",
     tagline: "A nocturnal discovery app built around atmosphere, instant curation, and urban vibes.",
-    client: "Nocturne Labs · New York",
+    client: "Concept Project",
     year: "2026",
     duration: "4 Weeks Sprint",
-    metric: "+42%",
-    metricLabel: "User Retention Boost",
+    metric: "",
+    metricLabel: "",
     overview:
       "A nightlife and cultural discovery platform designed to replace cluttered maps with high-vibe, atmosphere-first micro-recommendations.",
     challenge:
@@ -49,15 +47,15 @@ const allProjects: ProjectDetail[] = [
     category: "3d",
     categoryLabel: "3D Art & Material Systems",
     tagline: "A physical-digital material exploration where glass, chrome, color, and motion collide.",
-    client: "Studio Hyperchroma · Berlin",
+    client: "Concept Project",
     year: "2026",
     duration: "3 Weeks",
-    metric: "1.2M+",
-    metricLabel: "Impressions & Awards",
+    metric: "",
+    metricLabel: "",
     overview:
       "A series of procedural 3D visual sculptures exploring how tactile materials behave when freed from physical gravity.",
     challenge:
-      "Most digital 3D brands feel either hyper-sterile or overly generic. Hyperchroma needed a bold, signature visual language for their global spatial brand launch.",
+      "Most digital 3D brands feel either hyper-sterile or overly generic. A bold, signature visual language was needed for a global spatial brand launch.",
     solution:
       "Engineered custom shader materials mimicking chromatic glass, spun chrome ribbons, and liquid iridescent plastics with raytraced lighting and dynamic loop animations.",
     deliverables: [
@@ -77,15 +75,15 @@ const allProjects: ProjectDetail[] = [
     category: "brand",
     categoryLabel: "Brand Identity & Spatial Architecture",
     tagline: "An editorial identity system designed to look as sharp in print as it does in 3D visuals.",
-    client: "Nexus Arch Group · Tokyo",
+    client: "Concept Project",
     year: "2026",
     duration: "5 Weeks",
-    metric: "Design Lead",
-    metricLabel: "Global Rebrand",
+    metric: "",
+    metricLabel: "",
     overview:
       "A comprehensive brand overhaul for an architectural collective bridging physical high-density cities with digital spatial realities.",
     challenge:
-      "Nexus had grown from a local boutique studio into a global multidisciplinary firm, but their identity was stuck in rigid corporate grid conventions.",
+      "The brand had grown from a local boutique studio into a global multidisciplinary firm, but their identity was stuck in rigid corporate grid conventions.",
     solution:
       "Architected a dynamic, responsive identity system using modular typography, isometric spatial diagrams, warm paper substrates, and brutalist geometric layout structures.",
     deliverables: [
@@ -105,11 +103,11 @@ const allProjects: ProjectDetail[] = [
     category: "3d",
     categoryLabel: "Spatial Sound & 3D Visualizer",
     tagline: "An interactive audiovisual concept translating frequency spectrums into fluid ribbon dynamics.",
-    client: "Resonance Audio · London",
+    client: "Concept Project",
     year: "2026",
     duration: "2 Weeks",
-    metric: "FWA of the Day",
-    metricLabel: "Award Winner",
+    metric: "",
+    metricLabel: "",
     overview:
       "A real-time audiovisual visual concept mapping microphone input and synth tracks into undulating 3D ribbon geometries.",
     challenge:
@@ -132,15 +130,15 @@ const allProjects: ProjectDetail[] = [
     category: "product",
     categoryLabel: "Design System & UI Components",
     tagline: "A brutalist component library and token architecture built for high-impact product brands.",
-    client: "Void Craft · San Francisco",
+    client: "Self-Initiated",
     year: "2025",
     duration: "3 Weeks",
-    metric: "100%",
-    metricLabel: "Design System Score",
+    metric: "",
+    metricLabel: "",
     overview:
       "A high-contrast, tactile UI library combining neo-brutalist shadows with silky smooth micro-animations and accessibility tokens.",
     challenge:
-      "Design systems frequently compromise personality for compliance. Void Craft wanted extreme accessibility (WCAG AAA) without looking like another generic corporate UI kit.",
+      "Design systems frequently compromise personality for compliance. The goal was extreme accessibility (WCAG AAA) without looking like another generic corporate UI kit.",
     solution:
       "Engineered a tokenized color matrix with tactile 4px offset borders, custom focus states, high-contrast badges, and fluid typography.",
     deliverables: [
@@ -159,11 +157,11 @@ const allProjects: ProjectDetail[] = [
     category: "brand",
     categoryLabel: "Creative Direction & Studio Brand",
     tagline: "A bespoke studio identity celebrating hand-drawn craftsmanship in the age of algorithmic monotony.",
-    client: "Kunal Kumar Studio · Worldwide",
+    client: "Self-Initiated",
     year: "2026",
     duration: "Ongoing",
-    metric: "100%",
-    metricLabel: "Bespoke Craftsmanship",
+    metric: "",
+    metricLabel: "",
     overview:
       "The visual identity and digital home of Kunal Kumar Studio — marrying tactile paper textures, hand-drawn gestures, and modern graphic craft.",
     challenge:
@@ -184,9 +182,15 @@ const allProjects: ProjectDetail[] = [
 
 type CategoryFilter = "all" | "product" | "3d" | "brand";
 
+const filterTabs: { label: string; value: CategoryFilter }[] = [
+  { label: "All", value: "all" },
+  { label: "UI/UX", value: "product" },
+  { label: "3D", value: "3d" },
+  { label: "Branding", value: "brand" },
+];
+
 export function SelectedWork() {
   const [activeFilter, setActiveFilter] = useState<CategoryFilter>("all");
-  const [searchQuery, setSearchQuery] = useState<string>("");
   const [selectedProject, setSelectedProject] = useState<ProjectDetail | null>(null);
 
   const handleFilterClick = (filter: CategoryFilter) => {
@@ -200,232 +204,139 @@ export function SelectedWork() {
   };
 
   const filteredProjects = useMemo(() => {
-    return allProjects.filter((project) => {
-      const matchesCategory = activeFilter === "all" || project.category === activeFilter;
-      if (!matchesCategory) return false;
-
-      if (!searchQuery.trim()) return true;
-
-      const q = searchQuery.toLowerCase().trim();
-      return (
-        project.title.toLowerCase().includes(q) ||
-        project.tagline.toLowerCase().includes(q) ||
-        project.categoryLabel.toLowerCase().includes(q) ||
-        project.client.toLowerCase().includes(q) ||
-        project.tools.some((t) => t.toLowerCase().includes(q)) ||
-        project.deliverables.some((d) => d.toLowerCase().includes(q))
-      );
-    });
-  }, [activeFilter, searchQuery]);
+    if (activeFilter === "all") return allProjects;
+    return allProjects.filter((project) => project.category === activeFilter);
+  }, [activeFilter]);
 
   return (
     <section id="work" className="selected-work" aria-labelledby="work-title">
       <div className="work-inner-container">
-        {/* Section Header */}
         <div className="section-intro" data-reveal>
           <div className="section-intro-left">
             <div className="work-header-badge-row">
-              <p className="hand-label">✦ Selected Portfolio Projects</p>
+              <p className="hand-label">Selected Work</p>
             </div>
             <h2 id="work-title">Work made to be remembered & to convert.</h2>
           </div>
           <div className="section-intro-right">
             <p className="work-discription">
-              Every project is built on two non-negotiable principles: it must be exceptionally useful,
-              and it must look like nothing else on the internet. Click any project for the full case study breakdown.
+              Every project is built on two principles: it must be exceptionally useful,
+              and it must look like nothing else. Click any project for the full case study.
             </p>
           </div>
         </div>
 
-        {/* Filter and Search Controls Bar */}
         <div className="work-controls-bar">
-          {/* Category Filter Tabs */}
-          <div className="work-filter-tabs" role="tablist" aria-label="Filter projects by category">
-            <button
-              type="button"
-              role="tab"
-              aria-selected={activeFilter === "all"}
-              className={`filter-tab ${activeFilter === "all" ? "is-active" : ""}`}
-              onClick={() => handleFilterClick("all")}
-            >
-              All Projects <span className="tab-count">{allProjects.length}</span>
-            </button>
-            <button
-              type="button"
-              role="tab"
-              aria-selected={activeFilter === "product"}
-              className={`filter-tab filter-tab--product ${activeFilter === "product" ? "is-active" : ""}`}
-              onClick={() => handleFilterClick("product")}
-            >
-              Product & UI/UX{" "}
-              <span className="tab-count">
-                {allProjects.filter((p) => p.category === "product").length}
-              </span>
-            </button>
-            <button
-              type="button"
-              role="tab"
-              aria-selected={activeFilter === "3d"}
-              className={`filter-tab filter-tab--3d ${activeFilter === "3d" ? "is-active" : ""}`}
-              onClick={() => handleFilterClick("3d")}
-            >
-              3D & Motion{" "}
-              <span className="tab-count">
-                {allProjects.filter((p) => p.category === "3d").length}
-              </span>
-            </button>
-            <button
-              type="button"
-              role="tab"
-              aria-selected={activeFilter === "brand"}
-              className={`filter-tab filter-tab--brand ${activeFilter === "brand" ? "is-active" : ""}`}
-              onClick={() => handleFilterClick("brand")}
-            >
-              Brand Systems{" "}
-              <span className="tab-count">
-                {allProjects.filter((p) => p.category === "brand").length}
-              </span>
-            </button>
-          </div>
-
-          {/* Quick Search Input */}
-          <div className="work-search-box">
-            <MagnifyingGlass
-              size={16}
-              weight="bold"
-              className="work-search-icon"
-            />
-            <input
-              type="text"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Search by tool, title, or client..."
-              className="work-search-input"
-            />
-            {searchQuery && (
+          <div className="work-filter-tabs" role="tablist" aria-label="Filter projects by category" id="work-tabs">
+            {filterTabs.map((tab) => (
               <button
+                key={tab.value}
                 type="button"
-                onClick={() => setSearchQuery("")}
-                aria-label="Clear search"
-                className="work-search-clear"
+                role="tab"
+                id={`tab-${tab.value}`}
+                aria-selected={activeFilter === tab.value}
+                aria-controls={`tabpanel-${tab.value}`}
+                className={`filter-tab ${activeFilter === tab.value ? "is-active" : ""}`}
+                onClick={() => handleFilterClick(tab.value)}
               >
-                <X size={12} weight="bold" />
+                {tab.label}
+                {tab.value === "all" && <span className="tab-count">{allProjects.length}</span>}
               </button>
-            )}
+            ))}
           </div>
         </div>
 
-        {/* Projects Grid with 3D Tilt & Specular Highlights */}
         {filteredProjects.length > 0 ? (
-          <div className="work-layout" key={`${activeFilter}-${searchQuery}`}>
-            {filteredProjects.map((project, idx) => (
-              <Card3DTilt
+          <div
+            className="work-layout"
+            key={activeFilter}
+            role="tabpanel"
+            id={`tabpanel-${activeFilter}`}
+            aria-labelledby={`tab-${activeFilter}`}
+            aria-label={`Projects filtered by ${activeFilter === "all" ? "all categories" : activeFilter}`}
+          >
+            {filteredProjects.map((project) => (
+              <article
                 key={project.index}
-                maxTilt={6}
-                scale={1.015}
+                className={`illustrated-work-card work-card--interactive work-card--${
+                  project.category === "product"
+                    ? "feature"
+                    : project.category === "3d"
+                    ? "yellow"
+                    : "orange"
+                }`}
+                data-cursor="View Case Study"
+                tabIndex={0}
+                role="button"
+                aria-label={`Open case study for ${project.title}`}
+                onClick={() => handleOpenProject(project)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    handleOpenProject(project);
+                  }
+                }}
               >
-                <article
-                  className={`illustrated-work-card work-card--interactive work-card--${
-                    project.category === "product"
-                      ? "feature"
-                      : project.category === "3d"
-                      ? "yellow"
-                      : "orange"
-                  }`}
-                  data-cursor="View Case Study"
-                  tabIndex={0}
-                  role="button"
-                  aria-label={`Open case study for ${project.title}`}
-                  onClick={() => handleOpenProject(project)}
-                  onKeyDown={(e) => {
-                    if (e.key === "Enter" || e.key === " ") {
-                      e.preventDefault();
-                      handleOpenProject(project);
-                    }
-                  }}
-                >
-                  {/* Magic UI Border Beam on First / Featured Project */}
-                  {idx === 0 && (
-                    <BorderBeam size={180} duration={10} colorFrom="#1762dc" colorTo="#ffc62f" />
-                  )}
+                <div className="work-card-image">
+                  <Image
+                    src={project.image}
+                    alt={project.alt}
+                    fill
+                    sizes="(max-width: 760px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
+                  <div className="work-card-hover-overlay">
+                    <span className="hover-action-pill">
+                      <Eye size={16} weight="bold" /> View Case Study
+                    </span>
+                  </div>
+                </div>
 
-                  {/* Image Frame */}
-                  <div className="work-card-image">
-                    <Image
-                      src={project.image}
-                      alt={project.alt}
-                      fill
-                      sizes="(max-width: 760px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    />
-                    <div className="work-card-hover-overlay">
-                      <span className="hover-action-pill">
-                        <Eye size={16} weight="bold" /> View Case Study
-                      </span>
+                <div className="work-card-info">
+                  <div className="work-card-body">
+                    <div className="work-card-meta">
+                      <span className="card-index">{project.index}</span>
+                      <p className="card-type-label" title={project.categoryLabel}>
+                        {project.categoryLabel}
+                      </p>
+                      <div className="card-arrow-badge">
+                        <ArrowUpRight aria-hidden="true" weight="bold" size={14} />
+                      </div>
                     </div>
+                    <h3 className="card-title" title={project.title}>{project.title}</h3>
+                    <p className="card-desc" title={project.tagline}>{project.tagline}</p>
                   </div>
 
-                  {/* Info Content */}
-                  <div className="work-card-info">
-                    <div className="work-card-body">
-                      <div className="work-card-meta">
-                        <span className="card-index">{project.index}</span>
-                        <p className="card-type-label" title={project.categoryLabel}>
-                          {project.categoryLabel}
-                        </p>
-                        <div className="card-arrow-badge">
-                          <ArrowUpRight aria-hidden="true" weight="bold" size={14} />
-                        </div>
-                      </div>
-
-                      <h3 className="card-title" title={project.title}>{project.title}</h3>
-                      <p className="card-desc" title={project.tagline}>{project.tagline}</p>
-                    </div>
-
-                    {/* Tags and Metric Badges */}
-                    <div className="card-footer-tags">
-                      {project.metric && (
-                        <span className="card-metric-pill" title={`${project.metric} ${project.metricLabel}`}>
-                          <Sparkle size={12} weight="fill" />
-                          <strong>{project.metric}</strong> {project.metricLabel}
+                  <div className="card-footer-tags">
+                    <div className="card-tools-row">
+                      {project.tools.slice(0, 2).map((t) => (
+                        <span key={t} className="tool-chip">
+                          <Tag size={10} weight="bold" /> {t}
                         </span>
-                      )}
-                      <div className="card-tools-row">
-                        {project.tools.slice(0, 2).map((t) => (
-                          <span key={t} className="tool-chip">
-                            <Tag size={10} weight="bold" /> {t}
-                          </span>
-                        ))}
-                      </div>
+                      ))}
                     </div>
                   </div>
-                </article>
-              </Card3DTilt>
+                </div>
+              </article>
             ))}
           </div>
         ) : (
-          /* Empty State */
           <div className="work-empty-state">
-            <Funnel size={36} weight="duotone" />
-            <h3 className="work-empty-title">No matching projects found</h3>
-            <p className="work-empty-desc">
-              Try adjusting your search query or switching to another category filter.
-            </p>
+            <h3 className="work-empty-title">No matching projects</h3>
+            <p className="work-empty-desc">Try a different category.</p>
             <button
               type="button"
               onClick={() => {
                 setActiveFilter("all");
-                setSearchQuery("");
                 soundManager.playClick();
               }}
               className="work-reset-btn"
             >
-              Reset all filters
+              Show all projects
             </button>
           </div>
         )}
       </div>
 
-      {/* Case Study Modal Sheet */}
       <ProjectModal
         project={selectedProject}
         onClose={() => setSelectedProject(null)}

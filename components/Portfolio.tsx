@@ -14,11 +14,8 @@ import { RevealOnScroll } from "./portfolio/RevealOnScroll";
 import { ScrollProgress } from "./portfolio/ScrollProgress";
 import { SelectedWork } from "./portfolio/SelectedWork";
 import { SignalMarquee } from "./portfolio/SignalMarquee";
-
 import { StudioValue } from "./portfolio/StudioValue";
 import { ProjectEstimator } from "./portfolio/ProjectEstimator";
-
-import { FloatingDock } from "./ui/FloatingDock";
 import { CommandMenu } from "./ui/CommandMenu";
 import { CrtScanlines } from "./ui/CrtScanlines";
 
@@ -46,23 +43,17 @@ export function Portfolio() {
       <main id="main-content">
         <IllustratedHero />
         <SignalMarquee />
-        
         <SelectedWork />
         <StudioValue />
         <AboutStudio />
         <CreativePlayground />
         <DesignProcess />
         <ProjectEstimator />
-        
         <FaqSection />
       </main>
 
       <PortfolioContact />
 
-      {/* Magic UI / macOS Spring-Magnified Floating Dock */}
-      <FloatingDock onOpenCommandMenu={() => setCommandMenuOpen(true)} />
-
-      {/* Smooth UI / Aceternity Command Palette */}
       <CommandMenu
         isOpen={commandMenuOpen}
         onClose={() => setCommandMenuOpen(false)}

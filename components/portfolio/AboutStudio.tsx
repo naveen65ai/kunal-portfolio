@@ -7,7 +7,6 @@ import {
   Layout,
   Sparkle,
   CheckCircle,
-  Clock,
   Globe,
   Lightning,
 } from "@phosphor-icons/react";
@@ -124,7 +123,7 @@ export function AboutStudio() {
             name="Worldwide Remote"
             description="Based in India (IST / UTC+5:30), seamlessly collaborating with clients across San Francisco, London, Berlin, and Singapore."
             tag="Global Availability"
-            badge="Q2/Q3 Open"
+            badge="Select Projects"
             Icon={Globe}
           >
             <div className="bento-radar-box">
@@ -135,7 +134,7 @@ export function AboutStudio() {
                   <span className="bento-ping-core" />
                 </span>
                 <span className="bento-status-text">
-                  Accepting 2 new client sprints
+                  Available for select projects
                 </span>
               </div>
             </div>

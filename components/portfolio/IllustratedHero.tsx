@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { ArrowDown, ArrowRight, Sparkle } from "@phosphor-icons/react";
+import { ArrowDown, Sparkle } from "@phosphor-icons/react";
 import { type CSSProperties, type PointerEvent, useEffect, useRef } from "react";
 import heroCharacterOpen from "@/public/images/hero-character-open-alpha-v2.png";
 import heroCharacterBlink from "@/public/images/hero-character-blink-v2.png";
@@ -121,10 +121,11 @@ export function IllustratedHero() {
         </div>
 
         {/* Interactive Character Avatar */}
-        <div
-          className="hero-character-parallax cursor-pointer"
+        <button
+          type="button"
+          className="hero-character-parallax cursor-pointer bg-transparent border-none p-0"
           onClick={handleCharacterClick}
-          title="Click Kunal for creative spark! ⚡"
+          aria-label="Click Kunal for creative spark"
         >
           <div className="hero-character-shell" data-motion="hero-person">
             <Image
@@ -144,23 +145,41 @@ export function IllustratedHero() {
               sizes="(max-width: 760px) 92vw, 58vw"
             />
           </div>
-        </div>
+        </button>
 
         <div className="hero-floating-doodles" aria-hidden="true">
           <span
             className="hero-spark hero-spark--one cursor-pointer"
+            role="button"
+            tabIndex={0}
             onClick={() => {
               soundManager.playChime();
               fireConfetti();
+            }}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                soundManager.playChime();
+                fireConfetti();
+              }
             }}
           >
             ✦
           </span>
           <span
             className="hero-spark hero-spark--two cursor-pointer"
+            role="button"
+            tabIndex={0}
             onClick={() => {
               soundManager.playChime();
               fireConfetti();
+            }}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                soundManager.playChime();
+                fireConfetti();
+              }
             }}
           >
             ✦
@@ -172,20 +191,49 @@ export function IllustratedHero() {
         <div
           className="hero-note hero-note--yellow cursor-pointer"
           aria-hidden="true"
+          role="button"
+          tabIndex={0}
           onClick={() => soundManager.playHover()}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              soundManager.playHover();
+            }
+          }}
         >
           Same tools.<br />Bigger possibilities.
         </div>
         <div
           className="hero-note hero-note--coral cursor-pointer"
           aria-hidden="true"
+          role="button"
+          tabIndex={0}
           onClick={() => soundManager.playHover()}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              soundManager.playHover();
+            }
+          }}
         >
           Design builds<br />better tomorrow.
         </div>
 
         <div className="hero-desk" aria-hidden="true">
-          <span className="hero-smile cursor-pointer" onClick={() => fireConfetti()}>☺</span>
+          <span
+            className="hero-smile cursor-pointer"
+            role="button"
+            tabIndex={0}
+            onClick={() => fireConfetti()}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                fireConfetti();
+              }
+            }}
+          >
+            ☺
+          </span>
           <span className="hero-desk-note">Good people<br />great projects</span>
           <span className="hero-sketch-pad">Sketch<br />→ ship</span>
         </div>
