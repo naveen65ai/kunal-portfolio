@@ -68,7 +68,7 @@ export const projects: ProjectData[] = [
       "Designed an end-to-end iOS & Android design system with 140+ reusable components",
       "Built high-fidelity interactive Protopie micro-interaction prototypes for investor demos",
       "Established production-ready design tokens and multi-theme color architectures",
-      "Delivered complete handoff documentation for cross-functional engineering teams",
+      "Delivered complete Figma handoff documentation and production asset libraries",
     ],
     sections: [
       {
@@ -133,11 +133,11 @@ export const projects: ProjectData[] = [
     challenge:
       "Most digital 3D brands feel either hyper-sterile or overly generic. Hyperchroma needed a bold, signature visual language for their global spatial brand launch across web, spatial computing, and digital billboards.",
     solution:
-      "Engineered custom shader materials mimicking chromatic glass, spun chrome ribbons, and liquid iridescent plastics with raytraced lighting and dynamic loop animations.",
+      "Crafted custom 3D shader materials mimicking chromatic glass, spun chrome ribbons, and liquid iridescent plastics with raytraced lighting and dynamic loop animations.",
     outcomes: [
       "Crafted 12 high-resolution spatial key visual masterworks",
       "Rendered seamless 60fps 4K motion loops for global campaign rollouts",
-      "Engineered web-optimized 3D models with lightweight polygon budgets",
+      "Built optimized 3D models with efficient polygon budgets",
       "Delivered full art direction guidelines with color palettes and camera framing rules",
     ],
     sections: [
@@ -224,7 +224,7 @@ export const projects: ProjectData[] = [
     outcomes: [
       "Created a signature procedural 3D ribbon motion system",
       "Delivered real-time 3D concept scenes and render presets",
-      "Engineered flexible assets adaptable for album artwork and live performances",
+      "Produced flexible 3D visual assets adaptable for album artwork and live stages",
     ],
     sections: [
       {
@@ -258,7 +258,7 @@ export const projects: ProjectData[] = [
     challenge:
       "Design systems frequently compromise personality for compliance. Void Craft wanted extreme accessibility (WCAG AAA) without looking like another generic corporate UI kit.",
     solution:
-      "Engineered a tokenized color matrix with tactile 4px offset borders, custom focus states, high-contrast badges, and fluid typography.",
+      "Crafted a tokenized color matrix with tactile 4px offset borders, custom focus states, high-contrast badges, and fluid typography.",
     outcomes: [
       "220+ Figma components with comprehensive auto-layout 5.0 and component properties",
       "Full WCAG AAA contrast and keyboard focus accessibility specification",

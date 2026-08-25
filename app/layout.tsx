@@ -119,7 +119,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         {children}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(personSchema)
+              .replace(/</g, "\\u003c")
+              .replace(/>/g, "\\u003e")
+              .replace(/&/g, "\\u0026"),
+          }}
         />
       </body>
     </html>

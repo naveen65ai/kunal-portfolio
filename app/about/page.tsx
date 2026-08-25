@@ -41,8 +41,8 @@ const toolstack = [
     tools: ["Adobe Illustrator", "Adobe Photoshop", "Typography systems", "Brand guidelines"],
   },
   {
-    category: "Motion & Development",
-    tools: ["After Effects", "Rive", "React & Next.js", "Three.js & GSAP"],
+    category: "Motion & Interaction",
+    tools: ["After Effects", "Rive", "Figma Interactive Prototypes", "Lottie Animations"],
   },
 ];
 
@@ -100,7 +100,7 @@ export default function AboutPage() {
                     <CheckCircle size={18} weight="fill" className="text-emerald-600 shrink-0" />
                     <div>
                       <strong>Production-ready assets</strong>
-                      <p>Tokens, layer names, and components formatted for developer handoff.</p>
+                      <p>Structured tokens, organized layer hierarchies, and clear handoff specs.</p>
                     </div>
                   </div>
                 </div>
@@ -119,7 +119,7 @@ export default function AboutPage() {
                   </div>
                   <div className="about-visual-caption">
                     <strong>The Maker Workbench</strong>
-                    <span>Sketch · Model · Tokenize · Ship</span>
+                    <span>Sketch · Model · Prototype · Ship</span>
                   </div>
                 </div>
               </div>
@@ -132,10 +132,10 @@ export default function AboutPage() {
           <div className="subpage-container">
             <div className="tools-section-header">
               <span className="block-label">02 / Tools</span>
-              <h2 className="about-section-heading">A focused stack chosen for collaboration.</h2>
+              <h2 className="about-section-heading">A focused stack chosen for creative execution.</h2>
               <p className="about-tools-sub">
-                Every tool earns its place — chosen for creative flexibility and seamless handoff
-                with modern engineering workflows.
+                Every tool earns its place — chosen for creative freedom, precision 3D modeling,
+                and seamless collaborative design workflows.
               </p>
             </div>
 

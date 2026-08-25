@@ -25,9 +25,9 @@ const scopeOptions: ScopeItem[] = [
   },
   {
     id: "3d",
-    name: "3D Art & Spatial Visuals",
+    name: "3D Modeling & Spatial Art",
     baseDays: 10,
-    description: "Custom 3D objects, key visuals, interactive WebGL assets, and motion loops.",
+    description: "Custom 3D objects, key visuals, textured product renders, and motion loops.",
   },
   {
     id: "brand",

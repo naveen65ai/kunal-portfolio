@@ -22,22 +22,22 @@ const capabilities = [
   },
   {
     number: "03",
-    title: "3D & Motion",
+    title: "3D Modeling & Art",
     services: [
-      "3D modeling",
-      "Look development",
-      "Motion design",
+      "3D asset modeling",
+      "Texturing & lighting",
+      "Spatial scene design",
       "Product visualization",
     ],
   },
   {
     number: "04",
-    title: "Creative Development",
+    title: "Motion & Interaction",
     services: [
-      "Interactive websites",
-      "Motion implementation",
-      "WebGL experiences",
-      "Frontend prototyping",
+      "Micro-interactions",
+      "Motion prototypes",
+      "Interactive Figma variants",
+      "UI & Lottie animations",
     ],
   },
 ];
@@ -53,8 +53,8 @@ export function Capabilities() {
           </div>
           <div className="section-intro-right">
             <p className="work-discription">
-              One designer, four connected disciplines — so strategy, visuals, motion and code
-              never pull in different directions.
+              One multidisciplinary designer across product, brand, 3D and motion — so strategy,
+              visuals, and interactive flow never pull in different directions.
             </p>
           </div>
         </div>

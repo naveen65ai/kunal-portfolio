@@ -13,10 +13,10 @@ import { LocalTimeBadge } from "@/components/portfolio/LocalTimeBadge";
 
 const projectTypes = [
   "Product / UI UX",
-  "Website",
+  "Website Design",
   "Brand Identity",
-  "3D / Motion",
-  "Creative Development",
+  "3D Modeling & Art",
+  "Motion & Visuals",
   "Other",
 ];
 

@@ -2,9 +2,9 @@ const phrases = [
   "UI/UX Design",
   "Product",
   "Brand Identity",
-  "3D Art",
-  "Motion",
-  "Creative Development",
+  "3D Modeling",
+  "Motion Design",
+  "Design Systems",
 ];
 
 export function SignalMarquee() {

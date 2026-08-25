@@ -19,7 +19,7 @@ interface PhysicsObject {
 }
 
 const PALETTE = ["#ffc62f", "#ff704f", "#1762dc", "#087947", "#fffaf2", "#e879f9"];
-const LABELS = ["✦", "UI", "3D", "UX", "60FPS", "FIGMA", "BLENDER", "GLSL", "CODE", "SHADERS"];
+const LABELS = ["✦", "UI", "3D", "UX", "60FPS", "FIGMA", "BLENDER", "RENDER", "LIGHTING", "SCENE"];
 
 export function TactilePhysicsSandbox() {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);

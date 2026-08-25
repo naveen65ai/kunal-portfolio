@@ -9,7 +9,7 @@ const points = [
   },
   {
     title: "Built for Execution",
-    copy: "Design decisions are made with real implementation in mind: tokens, components and specs your developers can actually ship.",
+    copy: "Design decisions are made with real implementation in mind: structured tokens, organized Figma components, and clean design handoffs.",
   },
 ];
 
@@ -20,7 +20,7 @@ export function WhyKunal() {
         <div className="section-intro" data-reveal>
           <div className="section-intro-left">
             <p className="hand-label">✦ Why work with me</p>
-            <h2 id="why-title">Small studio focus. Full-stack craft.</h2>
+            <h2 id="why-title">Small studio focus. End-to-end design craft.</h2>
           </div>
         </div>
 

@@ -22,12 +22,12 @@ export function AboutPreview() {
         <div data-reveal>
           <p className="hand-label" style={{ color: "var(--paper)" }}>✦ About</p>
           <h2 id="about-preview-title" className="about-preview-lede">
-            I work at the intersection of design and technology.
+            I work at the intersection of product design, brand, and 3D art.
           </h2>
           <p className="about-preview-copy">
-            My practice combines product thinking, visual storytelling, 3D and interaction design
-            to create experiences that feel both useful and memorable — designed for real users,
-            built with real engineering in mind.
+            My practice combines product thinking, visual storytelling, 3D modeling and interaction
+            design to create experiences that feel both useful and memorable — designed for real
+            users, crafted with meticulous visual detail.
           </p>
           <Link className="about-preview-cta" href="/about">
             <span>More About Me</span>
