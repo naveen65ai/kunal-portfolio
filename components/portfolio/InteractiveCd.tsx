@@ -12,18 +12,16 @@ const tracks = [
   { id: "03", name: "Midnight Sprint to Launch", bpm: "128 BPM" },
 ];
 
-const mailtoUrl =
-  "mailto:kkunalkumar0055@gmail.com?subject=Project%20inquiry%20for%20Kunal";
+const gmailUrl =
+  "https://mail.google.com/mail/?view=cm&fs=1&to=kkunalkumar0055@gmail.com&su=Project%20inquiry%20from%20turntable";
 
 export function InteractiveCd() {
   const [spinning, setSpinning] = useState(true);
   const [currentTrackIndex, setCurrentTrackIndex] = useState(0);
 
   useEffect(() => {
-    const frame = requestAnimationFrame(() => {
-      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) setSpinning(false);
-    });
-    return () => cancelAnimationFrame(frame);
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    if (reducedMotion.matches) setSpinning(false);
   }, []);
 
   const handleToggleSpin = () => {
@@ -118,9 +116,11 @@ export function InteractiveCd() {
           </button>
           <a
             className="cd-note"
-            href={mailtoUrl}
+            href={gmailUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => soundManager.playClick()}
-            aria-label="Start a project inspired by this vibe; opens your email app"
+            aria-label="Start a project inspired by this vibe; opens Gmail in a new tab"
           >
             <Sparkle size={14} weight="fill" /> Let&apos;s Build <span>↗</span>
           </a>

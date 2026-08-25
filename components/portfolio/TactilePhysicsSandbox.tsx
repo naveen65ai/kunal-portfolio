@@ -19,7 +19,7 @@ interface PhysicsObject {
 }
 
 const PALETTE = ["#ffc62f", "#ff704f", "#1762dc", "#087947", "#fffaf2", "#e879f9"];
-const LABELS = ["✦", "UI", "3D", "UX", "60FPS", "FIGMA", "BLENDER", "RENDER", "LIGHTING", "SCENE"];
+const LABELS = ["✦", "UI", "3D", "UX", "60FPS", "FIGMA", "BLENDER", "GLSL", "CODE", "SHADERS"];
 
 export function TactilePhysicsSandbox() {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
@@ -35,6 +35,7 @@ export function TactilePhysicsSandbox() {
     if (!canvas) return;
 
     const width = canvas.width;
+    const height = canvas.height;
 
     const newObj: PhysicsObject = {
       id: Date.now() + Math.random(),

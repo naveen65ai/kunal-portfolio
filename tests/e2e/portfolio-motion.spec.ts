@@ -30,30 +30,23 @@ test.describe("living illustrated portfolio", () => {
 
     await expect(page.locator('[data-motion="hero-person"]')).toHaveCSS("animation-name", "none");
     await expect(page.locator('[data-motion="hero-blink"]')).toHaveCSS("animation-name", "none");
-    await expect(page.locator('[data-motion="portfolio-title"] span').first()).toHaveCSS(
-      "animation-name",
-      "none",
-    );
-
-    // The compact disc experiment lives on the playground page
-    await page.goto("/playground");
+    await expect(page.locator('[data-motion="portfolio-title"] span').first()).toHaveCSS("animation-name", "none");
     await expect(page.locator(".cd-disc")).toHaveCSS("animation-name", "none");
   });
 
-  test("lets visitors pause the rotating disc without losing the email action", async ({
-    page,
-  }) => {
-    await page.goto("/playground");
+  test("lets visitors pause the rotating disc without losing the Gmail action", async ({ page }) => {
+    await page.goto("/");
 
     const toggle = page.getByRole("button", { name: /rotating compact disc/i });
-    const email = page.getByRole("link", { name: /start a project inspired by this vibe/i });
+    const gmail = page.getByRole("link", { name: /start a project from the compact disc/i });
 
     await expect(toggle).toHaveAttribute("aria-pressed", "true");
     await expect(page.locator(".cd-disc")).toHaveCSS("animation-play-state", "running");
     await toggle.click();
     await expect(toggle).toHaveAttribute("aria-pressed", "false");
     await expect(page.locator(".cd-disc")).toHaveCSS("animation-play-state", "paused");
-    await expect(email).toHaveAttribute("href", /^mailto:kkunalkumar0055@gmail\.com/);
+    await expect(gmail).toHaveAttribute("href", /mail\.google\.com\/mail\/\?view=cm/);
+    await expect(gmail).toHaveAttribute("target", "_blank");
   });
 
   test("keeps the mobile menu keyboard-operable and inside the viewport", async ({ page }) => {
@@ -65,7 +58,7 @@ test.describe("living illustrated portfolio", () => {
     await trigger.click();
     await expect(trigger).toHaveAttribute("aria-expanded", "true");
     await expect(page.locator("#mobile-navigation")).toHaveAttribute("aria-hidden", "false");
-    await expect(page.locator('#mobile-navigation a[href="/work"]')).toBeFocused();
+    await expect(page.locator('#mobile-navigation a[href="#work"]')).toBeFocused();
     await page.keyboard.press("Escape");
     await expect(trigger).toBeFocused();
     await expect(trigger).toHaveAttribute("aria-expanded", "false");

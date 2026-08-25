@@ -1,11 +1,4 @@
-const phrases = [
-  "UI/UX Design",
-  "Product",
-  "Brand Identity",
-  "3D Modeling",
-  "Motion Design",
-  "Design Systems",
-];
+const phrases = ["UI / UX", "Brand systems", "3D worlds", "Motion", "Web experiences"];
 
 export function SignalMarquee() {
   return (

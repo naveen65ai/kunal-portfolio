@@ -1,11 +1,9 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
-
 // Web Audio API procedural sound engine - 0 external asset dependencies!
 class SoundEffectsManager {
   private ctx: AudioContext | null = null;
-  private muted: boolean = false; // Enabled by default across all devices & Vercel
+  private muted: boolean = true; // muted by default for best user experience
   private listeners: Set<(muted: boolean) => void> = new Set();
 
   constructor() {
@@ -13,9 +11,6 @@ class SoundEffectsManager {
       const stored = localStorage.getItem("kunal_portfolio_muted");
       if (stored !== null) {
         this.muted = stored === "true";
-      } else {
-        // Default to enabled (unmuted) so interactive toys work out of the box
-        this.muted = false;
       }
     }
   }
@@ -23,21 +18,15 @@ class SoundEffectsManager {
   private getContext(): AudioContext | null {
     if (typeof window === "undefined") return null;
     if (!this.ctx) {
-      const AudioCtx =
-        window.AudioContext ||
-        (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext;
+      const AudioCtx = window.AudioContext || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext;
       if (AudioCtx) {
         this.ctx = new AudioCtx();
       }
     }
     if (this.ctx && this.ctx.state === "suspended") {
-      this.ctx.resume().catch(() => {});
+      this.ctx.resume();
     }
     return this.ctx;
-  }
-
-  public unlock(): AudioContext | null {
-    return this.getContext();
   }
 
   public isMuted(): boolean {
@@ -49,26 +38,15 @@ class SoundEffectsManager {
     if (typeof window !== "undefined") {
       localStorage.setItem("kunal_portfolio_muted", String(muted));
     }
-    if (!muted) {
-      this.getContext();
-    }
     this.listeners.forEach((fn) => fn(muted));
   }
 
   public toggleMute(): boolean {
-    const nextMuted = !this.muted;
-    this.setMuted(nextMuted);
-    if (!nextMuted) {
+    this.setMuted(!this.muted);
+    if (!this.muted) {
       this.playChime();
     }
     return this.muted;
-  }
-
-  public unmute() {
-    if (this.muted) {
-      this.setMuted(false);
-      this.playChime();
-    }
   }
 
   public subscribe(listener: (muted: boolean) => void): () => void {
@@ -276,28 +254,3 @@ class SoundEffectsManager {
 }
 
 export const soundManager = new SoundEffectsManager();
-
-/**
- * Reactive React hook for subscribing to global sound mute/unmute state.
- */
-export function useSoundState() {
-  const [isMuted, setIsMuted] = useState<boolean>(() => soundManager.isMuted());
-
-  useEffect(() => {
-    setIsMuted(soundManager.isMuted());
-    const unsubscribe = soundManager.subscribe((nextMuted) => {
-      setIsMuted(nextMuted);
-    });
-    return unsubscribe;
-  }, []);
-
-  const toggleSound = useCallback(() => {
-    return soundManager.toggleMute();
-  }, []);
-
-  const unmute = useCallback(() => {
-    soundManager.unmute();
-  }, []);
-
-  return { isMuted, toggleSound, unmute };
-}
